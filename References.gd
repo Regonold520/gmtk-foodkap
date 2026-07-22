@@ -2,10 +2,8 @@ extends Node
 
 @onready var machineData : Dictionary = parse_json_path("res://datastore/machines.json")
 
-
-
-
-
+@onready var holdingManager : HoldingManagerNode = get_tree().current_scene.find_child("HoldingManager")
+@onready var selectionManager : SelectionManagerNode = get_tree().current_scene.find_child("SelectionManager")
 
 func parse_json_path(path):
 	var file := FileAccess.open(path, FileAccess.READ)
