@@ -3,11 +3,7 @@ class_name ResourceBox
 
 ## A box. that contains an ingredient
 
-@export var ResourceHeld : IngredientResource = null:
+@export var ResourcesHeld : Array[IngredientResource] = []:
 	set(type):
-		ResourceHeld = type
+		ResourcesHeld = type
 		$ItemTexture.texture = load("res://assets/ingredients/kaplin.png") #change later
-@export var Count : int = 0:
-	set(amount):
-		Count = amount
-		$Count.text = str(int(Count))

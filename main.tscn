@@ -2,14 +2,69 @@
 
 [ext_resource type="Script" uid="uid://ds30j7ju2x01n" path="res://scripts/holdingManager.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://blk14fdp1rcc6" path="res://scenes/ingredientBox.tscn" id="2_0xm2m"]
-[ext_resource type="Resource" uid="uid://cioa1fl85ef3i" path="res://debug/bread.tres" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://opk5dpwvdpmf" path="res://scripts/selectionManager.gd" id="2_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://cg77hijyxxnqb" path="res://icon.svg" id="3_lquwl"]
+[ext_resource type="Script" uid="uid://de02chtosiqg4" path="res://resources/ingredient.gd" id="5_lquwl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mltvj"]
+radius = 2.0
+
+[sub_resource type="Resource" id="Resource_1bvp3"]
+script = ExtResource("5_lquwl")
+metadata/_custom_type_script = "uid://de02chtosiqg4"
+
+[sub_resource type="Resource" id="Resource_lquwl"]
+script = ExtResource("5_lquwl")
+metadata/_custom_type_script = "uid://de02chtosiqg4"
+
+[sub_resource type="Resource" id="Resource_7mycd"]
+script = ExtResource("5_lquwl")
+metadata/_custom_type_script = "uid://de02chtosiqg4"
 
 [node name="Node2D" type="Node2D" unique_id=1273140]
 
-[node name="HoldingManager" type="Node" parent="." unique_id=280262521]
+[node name="HoldingManager" type="Node" parent="." unique_id=280262521 node_paths=PackedStringArray("ItemHeldVisual")]
 script = ExtResource("1_ig7tw")
+ItemHeldVisual = NodePath("Kaplin")
+
+[node name="Icon" type="Sprite2D" parent="HoldingManager" unique_id=417373091]
+position = Vector2(1028, 611)
+scale = Vector2(0.2283184, 0.8918921)
+texture = ExtResource("3_lquwl")
+
+[node name="Icon2" type="Sprite2D" parent="HoldingManager" unique_id=22368557]
+position = Vector2(991, 557)
+rotation = -1.5707964
+scale = Vector2(0.2283184, 0.8918921)
+texture = ExtResource("3_lquwl")
+
+[node name="Icon3" type="Sprite2D" parent="HoldingManager" unique_id=1449858173]
+position = Vector2(1067, 557)
+rotation = -1.5707964
+scale = Vector2(0.2283184, 0.8918921)
+texture = ExtResource("3_lquwl")
+
+[node name="Kaplin" type="Sprite2D" parent="HoldingManager" unique_id=202097846]
+position = Vector2(1028, 507.99994)
+scale = Vector2(0.42721432, 0.42721432)
+texture = ExtResource("3_lquwl")
+
+[node name="SelectionManager" type="Node" parent="." unique_id=1872995996 node_paths=PackedStringArray("selectionObject")]
+script = ExtResource("2_1bvp3")
+selectionObject = NodePath("Area2D")
+
+[node name="Area2D" type="Area2D" parent="SelectionManager" unique_id=127668326]
+
+[node name="Icon" type="Sprite2D" parent="SelectionManager/Area2D" unique_id=1805685733]
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("3_lquwl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SelectionManager/Area2D" unique_id=542888841]
+shape = SubResource("CircleShape2D_mltvj")
 
 [node name="Area2D" parent="." unique_id=961949610 instance=ExtResource("2_0xm2m")]
 position = Vector2(167, 89)
-ResourceHeld = ExtResource("3_h2yge")
-Count = 9
+ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_1bvp3"), SubResource("Resource_lquwl"), SubResource("Resource_7mycd")])
+
+[connection signal="clickedObject" from="SelectionManager" to="HoldingManager" method="_on_selection_manager_clicked_object"]
+[connection signal="clickedObject" from="SelectionManager" to="SelectionManager" method="_on_clicked_object"]
