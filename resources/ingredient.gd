@@ -11,3 +11,11 @@ class_name IngredientResource
 
 ## Refers to any sort of modulation on the object
 @export var Tint : Color = Color.WHITE
+
+## EffectTags are special things that can be added by certain machines. For example, not fully cooking something will give it the 'toasty' effect tag, which might be more ideal.
+@export var EffectTags : Array[String] = []
+
+
+func addTag(tag : String):
+	if !EffectTags.has(tag):
+		EffectTags.append(tag)

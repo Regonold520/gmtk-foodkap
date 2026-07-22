@@ -1,6 +1,10 @@
 {
-	"grill": {
-		"runTime": 1.0,
-		"inputCount": 1
+	"stove": {
+		"runTime": 10.0,
+		"fallbackType":"burntScraps",
+		"width":2,
+		"recipes": {
+			"testFood":"otherTestFood"
+		}
 	}
 }

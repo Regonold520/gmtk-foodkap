@@ -1,5 +1,6 @@
 @tool
 extends Node2D
+class_name BgGenerator
 
 @export var constantSlice : Sprite2D
 @export var extraSliceContainer : Node2D

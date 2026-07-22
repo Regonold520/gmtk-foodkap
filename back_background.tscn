@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://dumm04j3s5hib"]
+
+[ext_resource type="Texture2D" uid="uid://bxgpn2acxuobl" path="res://assets/ingredients/otherTestFood.png" id="1_ak0ax"]
+
+[node name="BackBackground" type="Node2D" unique_id=1327382273]
+
+[node name="Parallax2D4" type="Parallax2D" parent="." unique_id=1683137422]
+repeat_size = Vector2(576, 324)
+
+[node name="ColorRect" type="ColorRect" parent="Parallax2D4" unique_id=553336673]
+offset_right = 576.0
+offset_bottom = 324.0
+color = Color(0.05047106, 4.1609033e-05, 0.100379206, 1)
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1945627609]
+scroll_offset = Vector2(-310, -58)
+repeat_size = Vector2(576, 324)
+autoscroll = Vector2(-480, 3)
+
+[node name="Kaplin" type="Sprite2D" parent="Parallax2D" unique_id=452893820]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(14.999996, 14.999992)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin2" type="Sprite2D" parent="Parallax2D" unique_id=1748135228]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(93, 263.00003)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin3" type="Sprite2D" parent="Parallax2D" unique_id=777647071]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(248.00002, 116.999985)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin4" type="Sprite2D" parent="Parallax2D" unique_id=2074452006]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(393, 238)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin5" type="Sprite2D" parent="Parallax2D" unique_id=2120350808]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(509, 50.999985)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin6" type="Sprite2D" parent="Parallax2D" unique_id=1208309104]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(542, 213.00002)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin7" type="Sprite2D" parent="Parallax2D" unique_id=1842320528]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(542, 213.00002)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=818403547]
+modulate = Color(1, 1, 1, 0.42352942)
+scroll_offset = Vector2(-330, 503)
+repeat_size = Vector2(576, 324)
+autoscroll = Vector2(-400, 9)
+
+[node name="Kaplin" type="Sprite2D" parent="Parallax2D2" unique_id=1495713060]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(14.999996, 14.999992)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin2" type="Sprite2D" parent="Parallax2D2" unique_id=188268497]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(93, 263.00003)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin3" type="Sprite2D" parent="Parallax2D2" unique_id=186297357]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(248.00002, 116.999985)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin4" type="Sprite2D" parent="Parallax2D2" unique_id=949704733]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(393, 238)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin5" type="Sprite2D" parent="Parallax2D2" unique_id=1120827546]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(509, 50.999985)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin6" type="Sprite2D" parent="Parallax2D2" unique_id=1800629013]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(542, 213.00002)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin7" type="Sprite2D" parent="Parallax2D2" unique_id=1778659415]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(542, 213.00002)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=1755332251]
+modulate = Color(1, 1, 1, 0.21960784)
+scroll_offset = Vector2(-259, -126)
+repeat_size = Vector2(576, 324)
+autoscroll = Vector2(-360, 40)
+
+[node name="Kaplin" type="Sprite2D" parent="Parallax2D3" unique_id=657703348]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(14.999996, 14.999992)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin2" type="Sprite2D" parent="Parallax2D3" unique_id=955195263]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(93, 263.00003)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin3" type="Sprite2D" parent="Parallax2D3" unique_id=595484551]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(248.00002, 116.999985)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin4" type="Sprite2D" parent="Parallax2D3" unique_id=1503687894]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(393, 238)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin5" type="Sprite2D" parent="Parallax2D3" unique_id=1137816868]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(509, 50.999985)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin6" type="Sprite2D" parent="Parallax2D3" unique_id=1010727783]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(542, 213.00002)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin7" type="Sprite2D" parent="Parallax2D3" unique_id=1664137438]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(542, 213.00002)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
