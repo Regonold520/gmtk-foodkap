@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://b605k8vk4eklb"]
 
+[ext_resource type="Script" uid="uid://3d2dq17iweji" path="res://scripts/BackgroundGenerator.gd" id="1_dg77c"]
+[ext_resource type="Texture2D" uid="uid://d0s8ipw2o6f0d" path="res://assets/uiAndBg/slice.png" id="1_efxa6"]
 [ext_resource type="Script" uid="uid://ds30j7ju2x01n" path="res://scripts/holdingManager.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://blk14fdp1rcc6" path="res://scenes/ingredientBox.tscn" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://opk5dpwvdpmf" path="res://scripts/selectionManager.gd" id="2_1bvp3"]
@@ -10,6 +12,16 @@
 [ext_resource type="Texture2D" uid="uid://bnamtuh6dbb51" path="res://assets/machines/container.png" id="6_kek77"]
 [ext_resource type="Texture2D" uid="uid://0xu46j311sbf" path="res://assets/machines/grill.png" id="9_4c57u"]
 [ext_resource type="Script" uid="uid://bdl3763ymos5b" path="res://scripts/camera_2d.gd" id="10_4c57u"]
+
+[sub_resource type="Gradient" id="Gradient_1h7o1"]
+colors = PackedColorArray(0.2946382, 3.218744e-07, 8.4228816e-08, 1, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_mlghm"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_mltvj"]
+noise = SubResource("FastNoiseLite_mlghm")
+color_ramp = SubResource("Gradient_1h7o1")
+seamless = true
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mltvj"]
 radius = 2.0
@@ -30,6 +42,29 @@ Type = "testFood"
 metadata/_custom_type_script = "uid://de02chtosiqg4"
 
 [node name="Node2D" type="Node2D" unique_id=1273140]
+
+[node name="Background" type="Node2D" parent="." unique_id=1159840985 node_paths=PackedStringArray("constantSlice", "extraSliceContainer", "noiseTexture")]
+script = ExtResource("1_dg77c")
+constantSlice = NodePath("Slice")
+extraSliceContainer = NodePath("SliceContainer")
+noiseTexture = NodePath("TextureRect")
+segments = 10
+
+[node name="Slice" type="Sprite2D" parent="Background" unique_id=1829227431]
+position = Vector2(516, 162)
+texture = ExtResource("1_efxa6")
+
+[node name="SliceContainer" type="Node2D" parent="Background" unique_id=1490321238]
+
+[node name="TextureRect" type="TextureRect" parent="Background" unique_id=113348451]
+modulate = Color(1, 1, 1, 0.02745098)
+offset_left = -744.0
+offset_top = 4.0
+offset_right = 576.0
+offset_bottom = 212.0
+texture = SubResource("NoiseTexture2D_mltvj")
+expand_mode = 2
+stretch_mode = 1
 
 [node name="HoldingManager" type="Node" parent="." unique_id=280262521 node_paths=PackedStringArray("ItemHeldVisual")]
 script = ExtResource("1_ig7tw")
@@ -83,35 +118,16 @@ position = Vector2(365, 242.49997)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("6_kek77")
 
-[node name="Area2D" parent="Container" unique_id=961949610 instance=ExtResource("2_0xm2m")]
+[node name="Left" parent="Container" unique_id=961949610 instance=ExtResource("2_0xm2m")]
 position = Vector2(-17.2, 1.2000077)
 scale = Vector2(0.39999995, 0.39999995)
 
-[node name="Area2D2" parent="Container" unique_id=978876219 instance=ExtResource("2_0xm2m")]
+[node name="Right" parent="Container" unique_id=978876219 instance=ExtResource("2_0xm2m")]
 position = Vector2(17.599998, 1.2000077)
 scale = Vector2(0.39999995, 0.39999995)
 ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_1bvp3"), SubResource("Resource_kek77"), SubResource("Resource_4c57u")])
 
 [node name="Grill" type="Sprite2D" parent="." unique_id=676387498]
-position = Vector2(365.00003, 185.5)
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("9_4c57u")
-
-[node name="Container2" type="Sprite2D" parent="." unique_id=1249614761]
-position = Vector2(365, 242.49997)
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("6_kek77")
-
-[node name="Area2D" parent="Container2" unique_id=628414422 instance=ExtResource("2_0xm2m")]
-position = Vector2(-17.2, 1.2000077)
-scale = Vector2(0.39999995, 0.39999995)
-
-[node name="Area2D2" parent="Container2" unique_id=30351018 instance=ExtResource("2_0xm2m")]
-position = Vector2(17.599998, 1.2000077)
-scale = Vector2(0.39999995, 0.39999995)
-ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_1bvp3"), SubResource("Resource_kek77"), SubResource("Resource_4c57u")])
-
-[node name="Grill2" type="Sprite2D" parent="." unique_id=642044077]
 position = Vector2(365.00003, 185.5)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("9_4c57u")

@@ -29,7 +29,7 @@ func _on_selection_manager_clicked_object(object : Node):
 					canInput = false
 			else:
 				canInput = true
-			if inHand != null and canInput:
-				object.ResourcesHeld.append(inHand)
-				object.ResourcesHeld = object.ResourcesHeld
+			if canInput:
+				object.addItemToTop(inHand)
 				inHand = null
+		object.displayItems()

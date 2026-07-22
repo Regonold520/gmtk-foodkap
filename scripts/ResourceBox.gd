@@ -9,11 +9,12 @@ class_name ResourceBox
 		displayItems()
 
 func _ready():
+	ResourcesHeld = ResourcesHeld.duplicate(true)
 	displayItems()
 
 func displayItems() -> void:
-	print("hi! im display items and i have", ResourcesHeld)
-	if ResourcesHeld != []:
+	print("hi! im display item", name," and i have", ResourcesHeld, "And size is ", ResourcesHeld.size())
+	if ResourcesHeld.size() != 0:
 		$ItemTexture.texture = load("res://assets/ingredients/"+ResourcesHeld[0].Type+".png")
 		$Count.text = str(ResourcesHeld.size())
 	else:
@@ -24,3 +25,7 @@ func grabItemFromTop() -> IngredientResource:
 	var item = ResourcesHeld.pop_back()
 	displayItems()
 	return item
+
+func addItemToTop(item : IngredientResource):
+	ResourcesHeld.append(item)
+	displayItems()
