@@ -17,8 +17,9 @@ var inHand : IngredientResource = null:
 
 func _on_selection_manager_clicked_object(object : Node):
 	if object is ResourceBox:
-		if inHand == null and object.ResourcesHeld != []:
-			inHand = object.grabItemFromTop()
+		if inHand == null:
+			if object.ResourcesHeld != []:
+				inHand = object.grabItemFromTop()
 		else:
 			var canInput : bool
 			if object.ResourcesHeld != []:
@@ -29,6 +30,6 @@ func _on_selection_manager_clicked_object(object : Node):
 			else:
 				canInput = true
 			if inHand != null and canInput:
-				var newArray : Array[IngredientResource] = [inHand]
-				object.ResourcesHeld = newArray
+				object.ResourcesHeld.append(inHand)
+				object.ResourcesHeld = object.ResourcesHeld
 				inHand = null

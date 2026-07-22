@@ -8,7 +8,11 @@ class_name ResourceBox
 		ResourcesHeld = type
 		displayItems()
 
+func _ready():
+	displayItems()
+
 func displayItems() -> void:
+	print("hi! im display items and i have", ResourcesHeld)
 	if ResourcesHeld != []:
 		$ItemTexture.texture = load("res://assets/ingredients/"+ResourcesHeld[0].Type+".png")
 		$Count.text = str(ResourcesHeld.size())
