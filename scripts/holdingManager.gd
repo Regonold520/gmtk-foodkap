@@ -9,9 +9,26 @@ var inHand : IngredientResource = null:
 	set(item):
 		inHand = item
 		if ItemHeldVisual:
-			ItemHeldVisual.texture = load("res://assets/ingredients/kaplin.png")
+			if inHand != null:
+				ItemHeldVisual.texture = load("res://assets/ingredients/"+inHand.Type+".png")
+				ItemHeldVisual.modulate = inHand.Tint
+			else:
+				ItemHeldVisual.texture = null
 
 func _on_selection_manager_clicked_object(object : Node):
 	if object is ResourceBox:
 		if inHand == null and object.ResourcesHeld != []:
-			inHand = object.ResourcesHeld.pop_front()
+			inHand = object.grabItemFromTop()
+		else:
+			var canInput : bool
+			if object.ResourcesHeld != []:
+				if object.ResourcesHeld[0].Type == inHand.Type:
+					canInput = true
+				else:
+					canInput = false
+			else:
+				canInput = true
+			if inHand != null and canInput:
+				var newArray : Array[IngredientResource] = [inHand]
+				object.ResourcesHeld = newArray
+				inHand = null

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://br46wkcoku3w" path="res://scripts/ResourceBox.gd" id="1_cx443"]
 [ext_resource type="Texture2D" uid="uid://cg77hijyxxnqb" path="res://icon.svg" id="2_g71qr"]
+[ext_resource type="Texture2D" uid="uid://c54dmcpwvpoun" path="res://assets/ingredients/testFood.png" id="3_norf3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mltvj"]
 size = Vector2(48, 48)
@@ -19,8 +20,9 @@ offset_left = -17.0
 offset_top = -17.0
 offset_right = 17.0
 offset_bottom = 17.0
-texture = ExtResource("2_g71qr")
-expand_mode = 4
+texture = ExtResource("3_norf3")
+expand_mode = 2
+stretch_mode = 5
 
 [node name="Count" type="Label" parent="." unique_id=1928753435]
 offset_left = -23.0

@@ -8,3 +8,6 @@ class_name IngredientResource
 
 ## QualityModifier Refers to the increased quality of the food
 @export var QualityModifier : float = 1.0
+
+## Refers to any sort of modulation on the object
+@export var Tint : Color = Color.WHITE
