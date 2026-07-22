@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://de02chtosiqg4" path="res://resources/ingredient.gd" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://bnamtuh6dbb51" path="res://assets/machines/container.png" id="6_kek77"]
 [ext_resource type="Texture2D" uid="uid://0xu46j311sbf" path="res://assets/machines/grill.png" id="9_4c57u"]
+[ext_resource type="Script" uid="uid://bdl3763ymos5b" path="res://scripts/camera_2d.gd" id="10_4c57u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mltvj"]
 radius = 2.0
@@ -32,32 +33,34 @@ metadata/_custom_type_script = "uid://de02chtosiqg4"
 
 [node name="HoldingManager" type="Node" parent="." unique_id=280262521 node_paths=PackedStringArray("ItemHeldVisual")]
 script = ExtResource("1_ig7tw")
-ItemHeldVisual = NodePath("TestFood")
+ItemHeldVisual = NodePath("SubViewport/TestFood")
 
-[node name="Icon" type="Sprite2D" parent="HoldingManager" unique_id=417373091]
-position = Vector2(1028, 611)
+[node name="SubViewport" type="CanvasLayer" parent="HoldingManager" unique_id=1754174165]
+
+[node name="Icon" type="Sprite2D" parent="HoldingManager/SubViewport" unique_id=417373091]
+position = Vector2(472.08105, 334.74994)
 scale = Vector2(0.2283184, 0.8918921)
 texture = ExtResource("3_lquwl")
 
-[node name="Icon2" type="Sprite2D" parent="HoldingManager" unique_id=22368557]
-position = Vector2(991, 557)
+[node name="Icon2" type="Sprite2D" parent="HoldingManager/SubViewport" unique_id=22368557]
+position = Vector2(435.08112, 280.7499)
 rotation = -1.5707964
 scale = Vector2(0.2283184, 0.8918921)
 texture = ExtResource("3_lquwl")
 
-[node name="Icon3" type="Sprite2D" parent="HoldingManager" unique_id=1449858173]
-position = Vector2(1067, 557)
+[node name="Icon3" type="Sprite2D" parent="HoldingManager/SubViewport" unique_id=1449858173]
+position = Vector2(511.08112, 280.7499)
 rotation = -1.5707964
 scale = Vector2(0.2283184, 0.8918921)
 texture = ExtResource("3_lquwl")
 
-[node name="Plate" type="Sprite2D" parent="HoldingManager" unique_id=1557747950]
-position = Vector2(1029.0001, 530.00006)
+[node name="Plate" type="Sprite2D" parent="HoldingManager/SubViewport" unique_id=1557747950]
+position = Vector2(473.0813, 253.75003)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("3_272bh")
 
-[node name="TestFood" type="Sprite2D" parent="HoldingManager" unique_id=1093508646]
-position = Vector2(1030, 532)
+[node name="TestFood" type="Sprite2D" parent="HoldingManager/SubViewport" unique_id=1093508646]
+position = Vector2(474.08118, 255.74997)
 scale = Vector2(2.5, 2.5)
 offset = Vector2(0, -5)
 script = ExtResource("5_5vw27")
@@ -76,7 +79,7 @@ texture = ExtResource("3_lquwl")
 shape = SubResource("CircleShape2D_mltvj")
 
 [node name="Container" type="Sprite2D" parent="." unique_id=1874639578]
-position = Vector2(412, 309.99997)
+position = Vector2(365, 242.49997)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("6_kek77")
 
@@ -90,9 +93,32 @@ scale = Vector2(0.39999995, 0.39999995)
 ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_1bvp3"), SubResource("Resource_kek77"), SubResource("Resource_4c57u")])
 
 [node name="Grill" type="Sprite2D" parent="." unique_id=676387498]
-position = Vector2(412.00003, 253)
+position = Vector2(365.00003, 185.5)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("9_4c57u")
+
+[node name="Container2" type="Sprite2D" parent="." unique_id=1249614761]
+position = Vector2(365, 242.49997)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("6_kek77")
+
+[node name="Area2D" parent="Container2" unique_id=628414422 instance=ExtResource("2_0xm2m")]
+position = Vector2(-17.2, 1.2000077)
+scale = Vector2(0.39999995, 0.39999995)
+
+[node name="Area2D2" parent="Container2" unique_id=30351018 instance=ExtResource("2_0xm2m")]
+position = Vector2(17.599998, 1.2000077)
+scale = Vector2(0.39999995, 0.39999995)
+ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_1bvp3"), SubResource("Resource_kek77"), SubResource("Resource_4c57u")])
+
+[node name="Grill2" type="Sprite2D" parent="." unique_id=642044077]
+position = Vector2(365.00003, 185.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("9_4c57u")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=325803655]
+position = Vector2(288, 162)
+script = ExtResource("10_4c57u")
 
 [connection signal="clickedObject" from="SelectionManager" to="HoldingManager" method="_on_selection_manager_clicked_object"]
 [connection signal="clickedObject" from="SelectionManager" to="SelectionManager" method="_on_clicked_object"]
