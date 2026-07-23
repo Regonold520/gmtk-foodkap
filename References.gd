@@ -30,3 +30,25 @@ func getAverageColorOfImage(texture : Texture2D) -> Color:
 	color /= texture_size.x * texture_size.y
 
 	return Color(color.x, color.y, color.z)
+
+func addHorizontalGap(texture: Texture2D, gap: int) -> ImageTexture:
+	var img = texture.get_image()
+	var width = img.get_width()
+	var height = img.get_height()
+	var half = width / 2
+	var new_img = Image.create(width + gap, height, false, img.get_format())
+	new_img.fill(Color(0, 0, 0, 0))
+	
+	new_img.blit_rect(
+		img,
+		Rect2i(0, 0, half, height),
+		Vector2i(0, 0)
+	)
+	
+	new_img.blit_rect(
+		img,
+		Rect2i(half, 0, width - half, height),
+		Vector2i(half + gap, 0)
+	)
+
+	return ImageTexture.create_from_image(new_img)

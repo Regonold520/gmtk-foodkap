@@ -64,50 +64,49 @@ seamless = true
 [node name="BackBackground" type="Node2D" unique_id=1327382273]
 
 [node name="Parallax2D4" type="Parallax2D" parent="." unique_id=1683137422]
-repeat_size = Vector2(576, 324)
+repeat_size = Vector2(1152, 648)
 
 [node name="ColorRect" type="ColorRect" parent="Parallax2D4" unique_id=553336673]
-offset_right = 576.0
-offset_bottom = 324.0
+offset_right = 1152.0
+offset_bottom = 648.0
 color = Color(0.05047106, 4.1609033e-05, 0.100379206, 1)
 
 [node name="Parallax2D5" type="Parallax2D" parent="." unique_id=420562258]
 scroll_scale = Vector2(0.01, 0.01)
-repeat_size = Vector2(576, 324)
+repeat_size = Vector2(1152, 648)
 autoscroll = Vector2(-5.76, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D5" unique_id=86750075]
 material = SubResource("ShaderMaterial_46ukt")
-position = Vector2(92, 161)
+position = Vector2(221, 332)
 scale = Vector2(3.3984375, 2.53125)
 texture = ExtResource("2_h5upg")
 
 [node name="Parallax2D6" type="Parallax2D" parent="." unique_id=1543145318]
 scroll_scale = Vector2(0.1, 0.1)
-repeat_size = Vector2(576.535, 324)
+repeat_size = Vector2(1152, 648)
 autoscroll = Vector2(-30, 0)
 
 [node name="TextureRect" type="TextureRect" parent="Parallax2D6" unique_id=474918918]
 modulate = Color(1, 1, 1, 0.14509805)
-offset_right = 577.0
-offset_bottom = 512.0
+offset_right = 1152.0
+offset_bottom = 648.0
 texture = SubResource("NoiseTexture2D_mlghm")
 
 [node name="Parallax2D7" type="Parallax2D" parent="." unique_id=1043529136]
 scroll_scale = Vector2(0.1, 0.1)
-repeat_size = Vector2(576, 324)
+repeat_size = Vector2(1152, 648)
 autoscroll = Vector2(-30, 0)
 
 [node name="TextureRect" type="TextureRect" parent="Parallax2D7" unique_id=1661922624]
 modulate = Color(1, 1, 1, 0.14509805)
-offset_right = 577.0
-offset_bottom = 512.0
+offset_right = 1152.0
+offset_bottom = 648.0
 texture = SubResource("NoiseTexture2D_h5upg")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1945627609]
 scroll_scale = Vector2(0.5, 0.5)
-scroll_offset = Vector2(-310, -58)
-repeat_size = Vector2(576, 324)
+repeat_size = Vector2(1152, 648)
 autoscroll = Vector2(-480, 3)
 
 [node name="Kaplin" type="Sprite2D" parent="Parallax2D" unique_id=452893820]
@@ -152,11 +151,136 @@ position = Vector2(542, 213.00002)
 scale = Vector2(2.756, 2.756)
 texture = ExtResource("1_ak0ax")
 
+[node name="Kaplin8" type="Sprite2D" parent="Parallax2D" unique_id=429297968]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(585.268, 30.78)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin9" type="Sprite2D" parent="Parallax2D" unique_id=399310574]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(663.268, 278.78003)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin10" type="Sprite2D" parent="Parallax2D" unique_id=484921382]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(818.268, 132.78)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin11" type="Sprite2D" parent="Parallax2D" unique_id=146847489]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(963.268, 253.78001)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin12" type="Sprite2D" parent="Parallax2D" unique_id=681692643]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(1079.2681, 66.77999)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin13" type="Sprite2D" parent="Parallax2D" unique_id=301502935]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(1112.2681, 228.78003)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin14" type="Sprite2D" parent="Parallax2D" unique_id=1525432956]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(1112.2681, 228.78003)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin15" type="Sprite2D" parent="Parallax2D" unique_id=1201032420]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(32.268005, 322.78)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin16" type="Sprite2D" parent="Parallax2D" unique_id=283222291]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(110.268005, 570.78)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin17" type="Sprite2D" parent="Parallax2D" unique_id=78140661]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(265.268, 424.78)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin18" type="Sprite2D" parent="Parallax2D" unique_id=2079863472]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(410.268, 545.78)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin19" type="Sprite2D" parent="Parallax2D" unique_id=1348088105]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(526.26807, 358.78)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin20" type="Sprite2D" parent="Parallax2D" unique_id=2135425989]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(559.26807, 520.78)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin21" type="Sprite2D" parent="Parallax2D" unique_id=634656475]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(559.26807, 520.78)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin22" type="Sprite2D" parent="Parallax2D" unique_id=173291083]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(583.268, 339.78)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin23" type="Sprite2D" parent="Parallax2D" unique_id=1600812985]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(661.268, 587.78)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin24" type="Sprite2D" parent="Parallax2D" unique_id=1607212929]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(816.268, 441.78)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin25" type="Sprite2D" parent="Parallax2D" unique_id=555570904]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(961.268, 562.78)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin26" type="Sprite2D" parent="Parallax2D" unique_id=1210423045]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(1077.2681, 375.78)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin27" type="Sprite2D" parent="Parallax2D" unique_id=2076645817]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(1110.2681, 537.78)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
+[node name="Kaplin28" type="Sprite2D" parent="Parallax2D" unique_id=731673698]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(1110.2681, 537.78)
+scale = Vector2(2.756, 2.756)
+texture = ExtResource("1_ak0ax")
+
 [node name="Parallax2D2" type="Parallax2D" parent="." unique_id=818403547]
 modulate = Color(1, 1, 1, 0.42352942)
 scroll_scale = Vector2(0.25, 0.25)
-scroll_offset = Vector2(-330, 503)
-repeat_size = Vector2(576, 324)
+repeat_size = Vector2(1152, 648)
 autoscroll = Vector2(-400, 9)
 
 [node name="Kaplin" type="Sprite2D" parent="Parallax2D2" unique_id=1495713060]
@@ -204,8 +328,8 @@ texture = ExtResource("1_ak0ax")
 [node name="Parallax2D3" type="Parallax2D" parent="." unique_id=1755332251]
 modulate = Color(1, 1, 1, 0.21960784)
 scroll_scale = Vector2(0.1, 0.1)
-scroll_offset = Vector2(-259, -126)
-repeat_size = Vector2(576, 324)
+scroll_offset = Vector2(2, 0)
+repeat_size = Vector2(1152, 648)
 autoscroll = Vector2(-360, 40)
 
 [node name="Kaplin" type="Sprite2D" parent="Parallax2D3" unique_id=657703348]

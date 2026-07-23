@@ -5,12 +5,14 @@ class_name HoldingManagerNode
 
 @export var ItemHeldVisual : Sprite2D
 
+@export var ItemDataDisplay : IngredientDisplayControlNode
+
 var inHand : IngredientResource = null:
 	set(item):
 		inHand = item
 		if ItemHeldVisual:
 			if inHand != null:
-				ItemHeldVisual.texture = load("res://assets/ingredients/"+inHand.Type+".png")
+				ItemHeldVisual.texture = inHand.getTexture()
 				ItemHeldVisual.modulate = inHand.Tint
 			else:
 				ItemHeldVisual.texture = null
@@ -33,3 +35,10 @@ func _on_selection_manager_clicked_object(object : Node):
 				object.addItemToTop(inHand)
 				inHand = null
 		object.displayItems()
+
+func _process(delta):
+	if inHand:
+		ItemDataDisplay.display(inHand)
+		ItemDataDisplay.visible = true
+	else:
+		ItemDataDisplay.visible = false

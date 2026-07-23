@@ -15,7 +15,7 @@ func _ready():
 func displayItems() -> void:
 	#print("hi! im display item", name," and i have", ResourcesHeld, "And size is ", ResourcesHeld.size())
 	if ResourcesHeld.size() != 0:
-		$ItemTexture.texture = load("res://assets/ingredients/"+ResourcesHeld[0].Type+".png")
+		$ItemTexture.texture = ResourcesHeld[0].getTexture()
 		$Count.text = str(ResourcesHeld.size())
 	else:
 		$ItemTexture.texture = null

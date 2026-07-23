@@ -21,7 +21,7 @@ func areaClicked(area : Area2D) -> void:
 
 func _process(delta): #due to the volatile nature of machine slots, we will assume it can and will change every frame
 	if item:
-		$Food.texture = load("res://assets/ingredients/"+item.Type+".png")
+		$Food.texture = item.getTexture()
 		$Food.modulate = item.Tint
 	else:
 		$Food.texture = null

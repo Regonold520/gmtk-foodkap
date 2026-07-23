@@ -14,5 +14,13 @@
 		"recipes": {
 			"Grain":"Flour"
 		}
+	},
+	"cuttingboard":{
+		"runTime":10.0,
+		"fallbackType":"burntScraps",
+		"width":1,
+		"recipes": {
+			"Bread":"SlicedBread"
+		}
 	}
 }

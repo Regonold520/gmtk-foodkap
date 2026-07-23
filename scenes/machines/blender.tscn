@@ -58,7 +58,7 @@ scale_amount_min = 10.0
 scale_amount_max = 15.0
 color_ramp = SubResource("Gradient_mlghm")
 
-[node name="Blender" type="Sprite2D" parent="." unique_id=146211639]
+[node name="Visual" type="Sprite2D" parent="." unique_id=146211639]
 position = Vector2(-0.8, -21.199999)
 scale = Vector2(0.031489138, 0.031489138)
 texture = SubResource("AtlasTexture_mlghm")

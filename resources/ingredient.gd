@@ -19,3 +19,12 @@ class_name IngredientResource
 func addTag(tag : String):
 	if !EffectTags.has(tag):
 		EffectTags.append(tag)
+
+func getTexture():
+	var img = load("res://assets/ingredients/"+Type+".png")
+	if EffectTags.has("Cut"):
+		img = Ref.addHorizontalGap(img,4)
+	return img
+
+func getDisplayName():
+	return Type.capitalize()

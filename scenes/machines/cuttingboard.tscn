@@ -1,0 +1,360 @@
+[gd_scene format=3 uid="uid://dxixco4lksuuw"]
+
+[ext_resource type="Script" uid="uid://csjftx3yap15h" path="res://scripts/machineSpecific/cuttingboard.gd" id="1_g7tue"]
+[ext_resource type="Texture2D" uid="uid://bkl1wg1iteywy" path="res://assets/machines/singleContainer.png" id="2_g7tue"]
+[ext_resource type="PackedScene" uid="uid://blk14fdp1rcc6" path="res://scenes/ingredientBox.tscn" id="3_bvjmq"]
+[ext_resource type="Texture2D" uid="uid://b6ju3xp0u5fm8" path="res://assets/machines/countertop.png" id="4_pmvd0"]
+[ext_resource type="Texture2D" uid="uid://miw6rpacjnwm" path="res://assets/machines/cuttingBoardPieces.png" id="5_bvjmq"]
+[ext_resource type="Script" uid="uid://cu2b7000l0gfw" path="res://scripts/machineStarter.gd" id="6_og3oe"]
+[ext_resource type="Texture2D" uid="uid://cbuptnfbij8i0" path="res://assets/machines/cuttingBoard.png" id="6_pmvd0"]
+[ext_resource type="Script" uid="uid://dhinuyab5vpm" path="res://scripts/machineSlot.gd" id="7_ysub7"]
+[ext_resource type="Script" uid="uid://cs0sbb3q5o2qs" path="res://scripts/textureOffset.gd" id="8_qs6ss"]
+[ext_resource type="Texture2D" uid="uid://cg77hijyxxnqb" path="res://icon.svg" id="9_6cy38"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mltvj"]
+atlas = ExtResource("5_bvjmq")
+region = Rect2(1, 1, 11, 5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_li224"]
+atlas = ExtResource("5_bvjmq")
+region = Rect2(15, 1, 6, 15)
+
+[sub_resource type="Gradient" id="Gradient_mlghm"]
+offsets = PackedFloat32Array(0, 0.21794872, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.6025641, 1, 1, 1, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mltvj"]
+radius = 3.687821
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nnkmn"]
+size = Vector2(20, 17.6)
+
+[sub_resource type="Animation" id="Animation_og3oe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CuttingBoardPieces:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6.4000006, -26.4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CuttingBoardPieces:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.63865685]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CuttingBoardPieces/CuttingBoardPieces2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.265235, -3.0558553)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CuttingBoardPieces/CuttingBoardPieces2:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.926991]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CuttingBoardPieces/CuttingBoardPieces2/CuttingBoardPieces3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.6275878, -2.6666389)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CuttingBoardPieces/CuttingBoardPieces2/CuttingBoardPieces3:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-3.9429617]
+}
+
+[sub_resource type="Animation" id="Animation_ysub7"]
+resource_name = "idle"
+length = 3.0000000000000004
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CuttingBoardPieces:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.4, 3),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector2(6.4000006, -26.4), Vector2(7.2, -26.4), Vector2(6.4000006, -26.4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CuttingBoardPieces:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.4, 3),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [-0.63865685, -0.4783954, -0.63865685]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CuttingBoardPieces/CuttingBoardPieces2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.4, 3),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector2(3.265235, -3.0558553), Vector2(4.340269, -3.1562736), Vector2(3.265235, -3.0558553)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CuttingBoardPieces/CuttingBoardPieces2:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.4, 3),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [3.926991, 4.3492513, 3.926991]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CuttingBoardPieces/CuttingBoardPieces2/CuttingBoardPieces3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.4, 3),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector2(1.6275878, -2.6666389), Vector2(1.8848109, -3.2935534), Vector2(1.6275878, -2.6666389)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CuttingBoardPieces/CuttingBoardPieces2/CuttingBoardPieces3:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.4, 3),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [-3.9429617, -3.8764632, -3.9429617]
+}
+
+[sub_resource type="Animation" id="Animation_qs6ss"]
+resource_name = "work"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CuttingBoardPieces:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.49, 0.99),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(7.445, -22.315), Vector2(6.7999997, -21.2), Vector2(7.445, -22.315)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CuttingBoardPieces:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.49, 0.99),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.61784655, 0.79887664, 0.61784655]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CuttingBoardPieces/CuttingBoardPieces2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.49, 0.99),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(6.066863, 3.435758), Vector2(4.5631943, 2.7671757), Vector2(6.066863, 3.435758)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CuttingBoardPieces/CuttingBoardPieces2:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.49, 0.99),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.2339478, 1.4540312, 1.2339478]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CuttingBoardPieces/CuttingBoardPieces2/CuttingBoardPieces3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.49, 0.99),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(3.5854456, 5.210046), Vector2(9.604851, -2.1323457), Vector2(3.5854456, 5.210046)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CuttingBoardPieces/CuttingBoardPieces2/CuttingBoardPieces3:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.49, 0.99),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.23343176, -1.97947, 0.23343176]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6cy38"]
+_data = {
+&"RESET": SubResource("Animation_og3oe"),
+&"idle": SubResource("Animation_ysub7"),
+&"work": SubResource("Animation_qs6ss")
+}
+
+[node name="Machine" type="Node2D" unique_id=2047287072 node_paths=PackedStringArray("anim", "slots")]
+scale = Vector2(2.5, 2.5)
+script = ExtResource("1_g7tue")
+anim = NodePath("AnimationPlayer")
+slots = [NodePath("Slots/1")]
+id = "cuttingboard"
+
+[node name="Container" type="Sprite2D" parent="." unique_id=1157874640]
+position = Vector2(0, 22.8)
+scale = Vector2(0.99999976, 0.99999976)
+texture = ExtResource("2_g7tue")
+
+[node name="Left" parent="Container" unique_id=961949610 instance=ExtResource("3_bvjmq")]
+position = Vector2(-1.9073486e-06, 1.2000077)
+scale = Vector2(0.39999995, 0.39999995)
+
+[node name="Counter" type="Sprite2D" parent="." unique_id=1196010105]
+position = Vector2(0, 1.5258788e-06)
+scale = Vector2(0.9999998, 0.9999998)
+texture = ExtResource("4_pmvd0")
+
+[node name="CuttingBoardPieces" type="Sprite2D" parent="." unique_id=501694477]
+position = Vector2(6.4000006, -26.4)
+rotation = -0.63865685
+scale = Vector2(0.99999994, 0.99999994)
+texture = SubResource("AtlasTexture_mltvj")
+
+[node name="CuttingBoardPieces2" type="Sprite2D" parent="CuttingBoardPieces" unique_id=1096825746]
+z_index = 1
+position = Vector2(3.265235, -3.0558553)
+rotation = 3.926991
+texture = SubResource("AtlasTexture_mltvj")
+
+[node name="CuttingBoardPieces3" type="Sprite2D" parent="CuttingBoardPieces/CuttingBoardPieces2" unique_id=889755381]
+z_index = 1
+position = Vector2(1.6275878, -2.6666389)
+rotation = -3.9429617
+texture = SubResource("AtlasTexture_li224")
+
+[node name="CuttingBoard" type="Sprite2D" parent="." unique_id=841978976]
+position = Vector2(0.8, -18)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("6_pmvd0")
+
+[node name="Particles" type="CPUParticles2D" parent="." unique_id=284009227]
+position = Vector2(0, -9.200001)
+scale = Vector2(0.99999994, 0.99999994)
+emitting = false
+amount = 6
+lifetime = 0.6
+direction = Vector2(0, -1)
+gravity = Vector2(0, 1960)
+initial_velocity_min = 240.74
+initial_velocity_max = 240.74
+scale_amount_min = 10.0
+scale_amount_max = 15.0
+color_ramp = SubResource("Gradient_mlghm")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1686640489]
+position = Vector2(0, -24)
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("6_og3oe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1442546456]
+shape = SubResource("CircleShape2D_mltvj")
+
+[node name="Slots" type="Node2D" parent="." unique_id=807926907]
+
+[node name="1" type="Area2D" parent="Slots" unique_id=2091971503]
+position = Vector2(-2.019484e-28, -6.4000015)
+script = ExtResource("7_ysub7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slots/1" unique_id=1282507560]
+position = Vector2(0, -2.8000011)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_nnkmn")
+
+[node name="Food" type="Sprite2D" parent="Slots/1" unique_id=2089661783]
+offset = Vector2(0, -5)
+script = ExtResource("8_qs6ss")
+
+[node name="ProgressBar" type="TextureProgressBar" parent="Slots/1" unique_id=1902962755]
+offset_left = -7.1999993
+offset_top = 11.199999
+offset_right = 120.8
+offset_bottom = 139.2
+scale = Vector2(0.114910156, 0.114910156)
+max_value = 1.0
+step = 0.01
+fill_mode = 4
+texture_progress = ExtResource("9_6cy38")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1430680602]
+deterministic = true
+libraries/ = SubResource("AnimationLibrary_6cy38")

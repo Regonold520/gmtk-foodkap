@@ -18,7 +18,8 @@ func addMachine(machineName):
 		node.global_position = Vector2(365,185)
 	else:
 		node.global_position = machineListNodes[-1].global_position
-		node.global_position.x += Ref.machineData[machineListString[-1]]["width"] * spacing * 2
+		node.global_position.x += Ref.machineData[machineListString[-1]]["width"] * spacing
+		node.global_position.x += Ref.machineData[machineName]["width"] * spacing
 	machineListNodes.append(node)
 	machineListString.append(machineName)
 	
@@ -29,9 +30,11 @@ func addMachine(machineName):
 
 func _ready():
 	addMachine("stove")
-	addMachine("stove")
+	addMachine("cuttingboard")
 	addMachine("blender")
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_down"):
 		addMachine("stove")
+	if Input.is_action_just_pressed("ui_up"):
+		addMachine("blender")

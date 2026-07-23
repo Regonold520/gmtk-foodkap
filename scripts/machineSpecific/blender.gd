@@ -1,11 +1,8 @@
 extends Machine
 class_name BlenderMachine
 
-
-
-
 func run(_delta = 0) -> void:
-	find_child("Blender").offset = Vector2.from_angle(randf_range(-PI,PI)) * 8
+	find_child("Visual").offset = Vector2.from_angle(randf_range(-PI,PI)) * 8
 	for slot in slots:
 		if slot.item:
 			if slot.interactable:
