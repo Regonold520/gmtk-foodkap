@@ -6,5 +6,13 @@
 		"recipes": {
 			"testFood":"otherTestFood"
 		}
+	},
+	"blender":{
+		"runTime":10,
+		"fallbackType":"burntScraps",
+		"width":1,
+		"recipes": {
+			"Grain":"Flour"
+		}
 	}
 }

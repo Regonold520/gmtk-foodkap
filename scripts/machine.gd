@@ -7,7 +7,8 @@ var fallback := ""
 @export var slots : Array[MachineSlot] = []
 @export var id : String = ""
 
-@export var alwaysRun = false
+# by default, running never changes, so having it on true will default to the device always running.
+@export var Running = false
 var mData : Dictionary
 func _ready():
 	loadData()
@@ -24,5 +25,5 @@ func getRunTime() -> float:
 	return baseRunTime
 
 func _process(delta):
-	if alwaysRun:
+	if Running:
 		run(delta)

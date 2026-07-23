@@ -25,4 +25,6 @@ func generate():
 			noiseTexture.size.x = constantSlice.texture.get_width() * (segments + 1)
 
 func _ready():
+	if !Engine.is_editor_hint():
+		$BackBackground.visible = true
 	generate()

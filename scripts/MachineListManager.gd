@@ -30,7 +30,7 @@ func addMachine(machineName):
 func _ready():
 	addMachine("stove")
 	addMachine("stove")
-	addMachine("stove")
+	addMachine("blender")
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_down"):

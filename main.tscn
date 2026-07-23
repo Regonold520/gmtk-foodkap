@@ -4,10 +4,13 @@
 [ext_resource type="Script" uid="uid://3d2dq17iweji" path="res://scripts/BackgroundGenerator.gd" id="1_dg77c"]
 [ext_resource type="Texture2D" uid="uid://d0s8ipw2o6f0d" path="res://assets/uiAndBg/slice.png" id="1_efxa6"]
 [ext_resource type="Script" uid="uid://ds30j7ju2x01n" path="res://scripts/holdingManager.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://blk14fdp1rcc6" path="res://scenes/ingredientBox.tscn" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://opk5dpwvdpmf" path="res://scripts/selectionManager.gd" id="2_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://dj2iuufkxf5ot" path="res://assets/machines/plate.png" id="3_272bh"]
 [ext_resource type="Texture2D" uid="uid://cg77hijyxxnqb" path="res://icon.svg" id="3_lquwl"]
 [ext_resource type="Script" uid="uid://cs0sbb3q5o2qs" path="res://scripts/textureOffset.gd" id="5_5vw27"]
+[ext_resource type="Script" uid="uid://de02chtosiqg4" path="res://resources/ingredient.gd" id="5_lquwl"]
+[ext_resource type="Texture2D" uid="uid://bnamtuh6dbb51" path="res://assets/machines/container.png" id="6_kek77"]
 [ext_resource type="Script" uid="uid://co0umm5fhuord" path="res://scripts/MachineListManager.gd" id="8_4c57u"]
 [ext_resource type="Script" uid="uid://bdl3763ymos5b" path="res://scripts/camera_2d.gd" id="10_4c57u"]
 
@@ -24,9 +27,27 @@ seamless = true
 [sub_resource type="CircleShape2D" id="CircleShape2D_mltvj"]
 radius = 2.0
 
-[node name="Node2D" type="Node2D" unique_id=1273140]
+[sub_resource type="Resource" id="Resource_hgxv0"]
+script = ExtResource("5_lquwl")
+Type = "egg"
+metadata/_custom_type_script = "uid://de02chtosiqg4"
 
-[node name="BackBackground" parent="." unique_id=1327382273 instance=ExtResource("1_4c57u")]
+[sub_resource type="Resource" id="Resource_1bvp3"]
+script = ExtResource("5_lquwl")
+Type = "testFood"
+metadata/_custom_type_script = "uid://de02chtosiqg4"
+
+[sub_resource type="Resource" id="Resource_kek77"]
+script = ExtResource("5_lquwl")
+Type = "testFood"
+metadata/_custom_type_script = "uid://de02chtosiqg4"
+
+[sub_resource type="Resource" id="Resource_4c57u"]
+script = ExtResource("5_lquwl")
+Type = "testFood"
+metadata/_custom_type_script = "uid://de02chtosiqg4"
+
+[node name="Node2D" type="Node2D" unique_id=1273140]
 
 [node name="Background" type="Node2D" parent="." unique_id=1159840985 node_paths=PackedStringArray("constantSlice", "extraSliceContainer", "noiseTexture")]
 script = ExtResource("1_dg77c")
@@ -34,6 +55,9 @@ constantSlice = NodePath("Slice")
 extraSliceContainer = NodePath("SliceContainer")
 noiseTexture = NodePath("TextureRect")
 segments = 5
+
+[node name="BackBackground" parent="Background" unique_id=1327382273 instance=ExtResource("1_4c57u")]
+visible = false
 
 [node name="Slice" type="Sprite2D" parent="Background" unique_id=1829227431]
 position = Vector2(516, 162)
@@ -50,6 +74,20 @@ offset_bottom = 212.0
 texture = SubResource("NoiseTexture2D_mltvj")
 expand_mode = 2
 stretch_mode = 1
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1128849348]
+clip_children = 1
+position = Vector2(1130, 147)
+invert_enabled = true
+invert_border = 150.0
+polygon = PackedVector2Array(-503, -86, -503, 38, -353, 38, -354, -86)
+uv = PackedVector2Array(-495, -54, -500, 20, -341, 20, -360, -50)
+
+[node name="Slice" type="Sprite2D" parent="Polygon2D" unique_id=1764168840]
+modulate = Color(0.60933006, 0.6093301, 0.60933006, 1)
+position = Vector2(-426.5, 15)
+scale = Vector2(3.4642856, 1)
+texture = ExtResource("1_efxa6")
 
 [node name="HoldingManager" type="Node" parent="." unique_id=280262521 node_paths=PackedStringArray("ItemHeldVisual")]
 script = ExtResource("1_ig7tw")
@@ -102,24 +140,25 @@ shape = SubResource("CircleShape2D_mltvj")
 script = ExtResource("8_4c57u")
 BackgroundGenerator = NodePath("../Background")
 
+[node name="Container" type="Sprite2D" parent="." unique_id=530779057]
+position = Vector2(543, 244)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("6_kek77")
+
+[node name="Left" parent="Container" unique_id=961949610 instance=ExtResource("2_0xm2m")]
+position = Vector2(-17.2, 1.2000077)
+scale = Vector2(0.39999995, 0.39999995)
+ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_hgxv0")])
+
+[node name="Right" parent="Container" unique_id=734521637 instance=ExtResource("2_0xm2m")]
+position = Vector2(17.599998, 1.2000077)
+scale = Vector2(0.39999995, 0.39999995)
+ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_1bvp3"), SubResource("Resource_kek77"), SubResource("Resource_4c57u")])
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=325803655]
 position = Vector2(557, 162)
 script = ExtResource("10_4c57u")
 maxX = 557.0
-
-[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1128849348]
-clip_children = 1
-position = Vector2(1130, 147)
-invert_enabled = true
-invert_border = 150.0
-polygon = PackedVector2Array(-503, -86, -503, 38, -344, 41, -354, -86)
-uv = PackedVector2Array(-495, -54, -500, 20, -341, 20, -360, -50)
-
-[node name="Slice" type="Sprite2D" parent="Polygon2D" unique_id=1764168840]
-modulate = Color(0.60933006, 0.6093301, 0.60933006, 1)
-position = Vector2(-426.5, 15)
-scale = Vector2(3.4642856, 1)
-texture = ExtResource("1_efxa6")
 
 [connection signal="clickedObject" from="SelectionManager" to="HoldingManager" method="_on_selection_manager_clicked_object"]
 [connection signal="clickedObject" from="SelectionManager" to="SelectionManager" method="_on_clicked_object"]

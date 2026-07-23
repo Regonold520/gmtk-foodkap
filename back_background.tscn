@@ -1,6 +1,65 @@
 [gd_scene format=3 uid="uid://dumm04j3s5hib"]
 
+[ext_resource type="Shader" uid="uid://c5qrf761i3t1q" path="res://shaders/galaxy.gdshader" id="1_0k5ay"]
 [ext_resource type="Texture2D" uid="uid://bxgpn2acxuobl" path="res://assets/ingredients/otherTestFood.png" id="1_ak0ax"]
+[ext_resource type="Texture2D" uid="uid://cg77hijyxxnqb" path="res://icon.svg" id="2_h5upg"]
+
+[sub_resource type="Gradient" id="Gradient_4s4i2"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_giy7e"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_1h7o1"]
+noise = SubResource("FastNoiseLite_giy7e")
+color_ramp = SubResource("Gradient_4s4i2")
+
+[sub_resource type="Gradient" id="Gradient_8wf48"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_856ho"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_3n3aq"]
+noise = SubResource("FastNoiseLite_856ho")
+color_ramp = SubResource("Gradient_8wf48")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_46ukt"]
+shader = ExtResource("1_0k5ay")
+shader_parameter/dust_strength = 3.0
+shader_parameter/dust_color = Color(0.3614231, 0.44341555, 1, 1)
+shader_parameter/arm_count = 5.0
+shader_parameter/arm_compression = 0.1
+shader_parameter/core_radius = 0.19600000931
+shader_parameter/core_color = Color(0.98, 0.8, 0.79, 1)
+shader_parameter/galaxy_radius = 0.37600001460012
+shader_parameter/rotation_speed = 0.70000003325
+shader_parameter/sky_color = Color(0.050980393, 0, 0.101960786, 1)
+shader_parameter/star_size = 0.537
+shader_parameter/galaxy_center = Vector2(0.5, 0.5)
+shader_parameter/noise_texture_1 = SubResource("NoiseTexture2D_1h7o1")
+shader_parameter/noise_texture_2 = SubResource("NoiseTexture2D_3n3aq")
+
+[sub_resource type="Gradient" id="Gradient_giy7e"]
+offsets = PackedFloat32Array(0, 0.7125, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0.54410607, 0.6577031, 0.9, 0.9, 0.6045623, 0.73078126, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_1h7o1"]
+frequency = 0.023
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_mlghm"]
+noise = SubResource("FastNoiseLite_1h7o1")
+color_ramp = SubResource("Gradient_giy7e")
+seamless = true
+
+[sub_resource type="Gradient" id="Gradient_0k5ay"]
+offsets = PackedFloat32Array(0.375, 0.75625, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0.81000006, 0.48266193, 0.554062, 0.81000006, 1, 0.5958789, 0.68402714, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_4s4i2"]
+seed = 6
+frequency = 0.023
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_h5upg"]
+noise = SubResource("FastNoiseLite_4s4i2")
+color_ramp = SubResource("Gradient_0k5ay")
+seamless = true
 
 [node name="BackBackground" type="Node2D" unique_id=1327382273]
 
@@ -12,7 +71,41 @@ offset_right = 576.0
 offset_bottom = 324.0
 color = Color(0.05047106, 4.1609033e-05, 0.100379206, 1)
 
+[node name="Parallax2D5" type="Parallax2D" parent="." unique_id=420562258]
+scroll_scale = Vector2(0.01, 0.01)
+repeat_size = Vector2(576, 324)
+autoscroll = Vector2(-5.76, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D5" unique_id=86750075]
+material = SubResource("ShaderMaterial_46ukt")
+position = Vector2(92, 161)
+scale = Vector2(3.3984375, 2.53125)
+texture = ExtResource("2_h5upg")
+
+[node name="Parallax2D6" type="Parallax2D" parent="." unique_id=1543145318]
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(576.535, 324)
+autoscroll = Vector2(-30, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Parallax2D6" unique_id=474918918]
+modulate = Color(1, 1, 1, 0.14509805)
+offset_right = 577.0
+offset_bottom = 512.0
+texture = SubResource("NoiseTexture2D_mlghm")
+
+[node name="Parallax2D7" type="Parallax2D" parent="." unique_id=1043529136]
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(576, 324)
+autoscroll = Vector2(-30, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Parallax2D7" unique_id=1661922624]
+modulate = Color(1, 1, 1, 0.14509805)
+offset_right = 577.0
+offset_bottom = 512.0
+texture = SubResource("NoiseTexture2D_h5upg")
+
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1945627609]
+scroll_scale = Vector2(0.5, 0.5)
 scroll_offset = Vector2(-310, -58)
 repeat_size = Vector2(576, 324)
 autoscroll = Vector2(-480, 3)
@@ -61,6 +154,7 @@ texture = ExtResource("1_ak0ax")
 
 [node name="Parallax2D2" type="Parallax2D" parent="." unique_id=818403547]
 modulate = Color(1, 1, 1, 0.42352942)
+scroll_scale = Vector2(0.25, 0.25)
 scroll_offset = Vector2(-330, 503)
 repeat_size = Vector2(576, 324)
 autoscroll = Vector2(-400, 9)
@@ -109,6 +203,7 @@ texture = ExtResource("1_ak0ax")
 
 [node name="Parallax2D3" type="Parallax2D" parent="." unique_id=1755332251]
 modulate = Color(1, 1, 1, 0.21960784)
+scroll_scale = Vector2(0.1, 0.1)
 scroll_offset = Vector2(-259, -126)
 repeat_size = Vector2(576, 324)
 autoscroll = Vector2(-360, 40)
