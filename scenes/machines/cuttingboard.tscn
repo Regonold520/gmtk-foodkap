@@ -285,6 +285,7 @@ scale = Vector2(0.9999998, 0.9999998)
 texture = ExtResource("4_pmvd0")
 
 [node name="CuttingBoardPieces" type="Sprite2D" parent="." unique_id=501694477]
+modulate = Color(0.9428228, 0.94282264, 0.94282264, 1)
 position = Vector2(6.4000006, -26.4)
 rotation = -0.63865685
 scale = Vector2(0.99999994, 0.99999994)

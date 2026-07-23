@@ -22,6 +22,8 @@ func run(_delta = 0) -> void:
 					slot.item.Type = mData["recipes"][slot.item.Type]
 				else:
 					slot.item.Type = mData["fallbackType"]
+				slot.item.EffectTags.erase("Cut")
+				slot.item.set_meta("blender_progress",0.0)
 		else:
 			Running = false
 

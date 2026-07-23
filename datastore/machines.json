@@ -4,23 +4,25 @@
 		"fallbackType":"burntScraps",
 		"width":2,
 		"recipes": {
-			"testFood":"otherTestFood"
+			"testFood":"otherTestFood",
+			"dough":"bread"
 		}
 	},
 	"blender":{
-		"runTime":10,
+		"runTime":5,
 		"fallbackType":"burntScraps",
 		"width":1,
 		"recipes": {
-			"Grain":"Flour"
+			"grain":"flour",
+			"flour":"dough"
 		}
 	},
 	"cuttingboard":{
-		"runTime":10.0,
+		"runTime":5.0,
 		"fallbackType":"burntScraps",
 		"width":1,
 		"recipes": {
-			"Bread":"SlicedBread"
+			"bread":"breadslice"
 		}
 	}
 }
