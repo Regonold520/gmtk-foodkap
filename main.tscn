@@ -10,10 +10,15 @@
 [ext_resource type="Texture2D" uid="uid://cg77hijyxxnqb" path="res://icon.svg" id="3_lquwl"]
 [ext_resource type="Texture2D" uid="uid://wjb1oiu2abev" path="res://assets/uiAndBg/back.png" id="4_2cqfq"]
 [ext_resource type="Script" uid="uid://cs0sbb3q5o2qs" path="res://scripts/textureOffset.gd" id="5_5vw27"]
+[ext_resource type="Texture2D" uid="uid://d3he3cqyhq0h6" path="res://assets/uiAndBg/barrier.png" id="5_d13ii"]
 [ext_resource type="Script" uid="uid://de02chtosiqg4" path="res://resources/ingredient.gd" id="5_lquwl"]
-[ext_resource type="Texture2D" uid="uid://bnamtuh6dbb51" path="res://assets/machines/container.png" id="6_kek77"]
+[ext_resource type="Texture2D" uid="uid://bdgl54jx4xuwf" path="res://assets/ingredients/bread.png" id="5_lswn8"]
+[ext_resource type="Script" uid="uid://ceyyvw66fu76h" path="res://scripts/Trash.gd" id="6_0odxb"]
+[ext_resource type="Texture2D" uid="uid://c6381y4ctkrgj" path="res://assets/uiAndBg/handle.png" id="6_1u8w0"]
+[ext_resource type="Script" uid="uid://dvr4ihufbyuwt" path="res://scripts/WindowHandle.gd" id="7_1u8w0"]
 [ext_resource type="Script" uid="uid://co0umm5fhuord" path="res://scripts/MachineListManager.gd" id="8_4c57u"]
 [ext_resource type="Script" uid="uid://bdl3763ymos5b" path="res://scripts/camera_2d.gd" id="10_4c57u"]
+[ext_resource type="Texture2D" uid="uid://dplp4vo1enthm" path="res://assets/machines/steelcontainer.png" id="13_getpj"]
 [ext_resource type="Script" uid="uid://b2g8wwkxmtd4b" path="res://scripts/IngredientDisplayUI.gd" id="14_vivmo"]
 [ext_resource type="Texture2D" uid="uid://dnhaka4bdiuiv" path="res://assets/ingredients/egg.png" id="15_2cqfq"]
 [ext_resource type="Texture2D" uid="uid://hchkycej2grt" path="res://assets/uiAndBg/test9Slice.png" id="17_074og"]
@@ -44,6 +49,12 @@ colors = PackedColorArray(0.9137255, 0.36862746, 0, 1, 1, 0.03529412, 0.07450981
 
 [sub_resource type="Gradient" id="Gradient_2cqfq"]
 colors = PackedColorArray(0.9137255, 1, 0, 1, 1, 0.84313726, 0.07450981, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlghm"]
+size = Vector2(178.00006, 97.00001)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mltvj"]
+size = Vector2(26, 9)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vivmo"]
 content_margin_left = 3.0
@@ -176,12 +187,65 @@ scale_amount_curve = SubResource("Curve_mltvj")
 color_ramp = SubResource("Gradient_mlghm")
 color_initial_ramp = SubResource("Gradient_2cqfq")
 
+[node name="TrashParticle" type="CPUParticles2D" parent="." unique_id=1362439512]
+position = Vector2(733.00006, 183)
+scale = Vector2(2.5, 2.5)
+emitting = false
+amount = 1
+texture = ExtResource("5_lswn8")
+lifetime = 0.9
+one_shot = true
+direction = Vector2(0, -1)
+spread = 10.0
+gravity = Vector2(-400, 0)
+initial_velocity_min = 30.0
+initial_velocity_max = 30.0
+scale_amount_min = 2.0
+scale_amount_max = 2.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=78953797]
+offset_left = 682.265
+offset_top = 85.0
+offset_right = 757.265
+offset_bottom = 144.0
+offset_transform_enabled = true
+offset_transform_scale = Vector2(2.5, 2.5)
+offset_transform_visual_only = false
+texture = ExtResource("5_d13ii")
+stretch_mode = 1
+
+[node name="Area2D" type="Area2D" parent="TextureRect" unique_id=1230229922 node_paths=PackedStringArray("trashParticle")]
+position = Vector2(37.994003, 78.914)
+scale = Vector2(0.39999995, 0.39999995)
+script = ExtResource("6_0odxb")
+trashParticle = NodePath("../../TrashParticle")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D" unique_id=2069869261]
+position = Vector2(-1, 4.5)
+shape = SubResource("RectangleShape2D_mlghm")
+disabled = true
+
+[node name="Handle" type="Sprite2D" parent="TextureRect" unique_id=1198956977]
+z_index = 1
+position = Vector2(36.9, 56.5)
+texture = ExtResource("6_1u8w0")
+
+[node name="Area2D" type="Area2D" parent="TextureRect/Handle" unique_id=1332232121 node_paths=PackedStringArray("trashClickzone")]
+position = Vector2(0.40000004, -0.8000015)
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("7_1u8w0")
+trashClickzone = NodePath("../../Area2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Handle/Area2D" unique_id=2120305249]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_mltvj")
+
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=1128849348]
 clip_children = 1
 position = Vector2(1130, 147)
 invert_enabled = true
 invert_border = 150.0
-polygon = PackedVector2Array(-503, -86, -503, 38, -353, 38, -354, -86)
+polygon = PackedVector2Array(-503, -86, -503, 38, -318, 38, -318, -86)
 uv = PackedVector2Array(-495, -54, -500, 20, -341, 20, -360, -50)
 
 [node name="Slice2" type="Sprite2D" parent="Polygon2D" unique_id=640395024]
@@ -369,19 +433,69 @@ shape = SubResource("CircleShape2D_mltvj")
 script = ExtResource("8_4c57u")
 BackgroundGenerator = NodePath("../Background")
 
-[node name="Container" type="Sprite2D" parent="." unique_id=530779057]
+[node name="DeepFreezer" type="Sprite2D" parent="." unique_id=530779057]
 position = Vector2(543, 244)
 scale = Vector2(2.5, 2.5)
-texture = ExtResource("6_kek77")
+texture = ExtResource("13_getpj")
 
-[node name="Left" parent="Container" unique_id=961949610 instance=ExtResource("2_0xm2m")]
+[node name="Left" parent="DeepFreezer" unique_id=961949610 instance=ExtResource("2_0xm2m")]
 position = Vector2(-17.2, 1.2000077)
 scale = Vector2(0.39999995, 0.39999995)
+canRecieveNewItemsIfEmpty = false
 ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_hgxv0")])
 
-[node name="Right" parent="Container" unique_id=734521637 instance=ExtResource("2_0xm2m")]
+[node name="Right" parent="DeepFreezer" unique_id=734521637 instance=ExtResource("2_0xm2m")]
 position = Vector2(17.599998, 1.2000077)
 scale = Vector2(0.39999995, 0.39999995)
+canRecieveNewItemsIfEmpty = false
+ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_1bvp3"), SubResource("Resource_kek77"), SubResource("Resource_4c57u")])
+
+[node name="DeepFreezer4" type="Sprite2D" parent="." unique_id=771303666]
+position = Vector2(543, 201.99998)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("13_getpj")
+
+[node name="Left" parent="DeepFreezer4" unique_id=1368300611 instance=ExtResource("2_0xm2m")]
+position = Vector2(-17.2, 1.2000077)
+scale = Vector2(0.39999995, 0.39999995)
+canRecieveNewItemsIfEmpty = false
+
+[node name="Right" parent="DeepFreezer4" unique_id=140884475 instance=ExtResource("2_0xm2m")]
+position = Vector2(17.599998, 1.2000077)
+scale = Vector2(0.39999995, 0.39999995)
+canRecieveNewItemsIfEmpty = false
+ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_1bvp3"), SubResource("Resource_kek77"), SubResource("Resource_4c57u")])
+
+[node name="DeepFreezer3" type="Sprite2D" parent="." unique_id=905716188]
+position = Vector2(543, 160)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("13_getpj")
+
+[node name="Left" parent="DeepFreezer3" unique_id=459325731 instance=ExtResource("2_0xm2m")]
+position = Vector2(-17.2, 1.2000077)
+scale = Vector2(0.39999995, 0.39999995)
+canRecieveNewItemsIfEmpty = false
+
+[node name="Right" parent="DeepFreezer3" unique_id=1833176168 instance=ExtResource("2_0xm2m")]
+position = Vector2(17.599998, 1.2000077)
+scale = Vector2(0.39999995, 0.39999995)
+canRecieveNewItemsIfEmpty = false
+ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_1bvp3"), SubResource("Resource_kek77"), SubResource("Resource_4c57u")])
+
+[node name="DeepFreezer2" type="Sprite2D" parent="." unique_id=824760828]
+position = Vector2(543, 118)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("13_getpj")
+
+[node name="Left" parent="DeepFreezer2" unique_id=561892683 instance=ExtResource("2_0xm2m")]
+position = Vector2(-17.2, 1.2000077)
+scale = Vector2(0.39999995, 0.39999995)
+canRecieveNewItemsIfEmpty = false
+
+[node name="Right" parent="DeepFreezer2" unique_id=1334110125 instance=ExtResource("2_0xm2m")]
+position = Vector2(17.599998, 1.2000077)
+scale = Vector2(0.39999995, 0.39999995)
+canRecieveNewItemsIfEmpty = false
 ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_1bvp3"), SubResource("Resource_kek77"), SubResource("Resource_4c57u")])
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=325803655 node_paths=PackedStringArray("BG")]
@@ -399,6 +513,7 @@ planetScene = ExtResource("18_cegan")
 constantPlanet = NodePath("CanvasLayer/Control/PixelCircle9")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="SelectorUIManager" unique_id=922740644]
+visible = false
 
 [node name="Control" type="Control" parent="SelectorUIManager/CanvasLayer" unique_id=1770802435]
 layout_mode = 3

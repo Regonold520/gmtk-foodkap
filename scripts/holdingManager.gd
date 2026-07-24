@@ -19,6 +19,8 @@ var inHand : IngredientResource = null:
 
 func _on_selection_manager_clicked_object(object : Node):
 	if object is ResourceBox:
+		if !object.canRecieveNewItemsIfEmpty and object.ResourcesHeld == []: return
+		
 		if inHand == null:
 			if object.ResourcesHeld != []:
 				inHand = object.grabItemFromTop()
@@ -35,7 +37,7 @@ func _on_selection_manager_clicked_object(object : Node):
 				object.addItemToTop(inHand)
 				inHand = null
 		object.displayItems()
-
+	
 func _process(delta):
 	if inHand:
 		ItemDataDisplay.display(inHand)

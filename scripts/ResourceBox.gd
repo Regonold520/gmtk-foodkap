@@ -3,6 +3,8 @@ class_name ResourceBox
 
 ## A box. that contains an ingredient
 
+@export var canRecieveNewItemsIfEmpty = true
+
 @export var ResourcesHeld : Array[IngredientResource] = []:
 	set(type):
 		ResourcesHeld = type
