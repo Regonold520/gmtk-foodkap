@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dumm04j3s5hib"]
 
 [ext_resource type="Shader" uid="uid://c5qrf761i3t1q" path="res://shaders/galaxy.gdshader" id="1_0k5ay"]
-[ext_resource type="Texture2D" uid="uid://bxgpn2acxuobl" path="res://assets/ingredients/otherTestFood.png" id="1_ak0ax"]
 [ext_resource type="Texture2D" uid="uid://cg77hijyxxnqb" path="res://icon.svg" id="2_h5upg"]
+[ext_resource type="Texture2D" uid="uid://bciugcximuiyt" path="res://assets/uiAndBg/pixelCircle.png" id="3_0k5ay"]
 
 [sub_resource type="Gradient" id="Gradient_4s4i2"]
 
@@ -36,29 +36,29 @@ shader_parameter/galaxy_center = Vector2(0.5, 0.5)
 shader_parameter/noise_texture_1 = SubResource("NoiseTexture2D_1h7o1")
 shader_parameter/noise_texture_2 = SubResource("NoiseTexture2D_3n3aq")
 
-[sub_resource type="Gradient" id="Gradient_giy7e"]
+[sub_resource type="Gradient" id="Gradient_h5upg"]
 offsets = PackedFloat32Array(0, 0.7125, 1)
 colors = PackedColorArray(0, 0, 0, 0, 0.54410607, 0.6577031, 0.9, 0.9, 0.6045623, 0.73078126, 1, 1)
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_1h7o1"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_46ukt"]
 frequency = 0.023
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_mlghm"]
-noise = SubResource("FastNoiseLite_1h7o1")
-color_ramp = SubResource("Gradient_giy7e")
+noise = SubResource("FastNoiseLite_46ukt")
+color_ramp = SubResource("Gradient_h5upg")
 seamless = true
 
-[sub_resource type="Gradient" id="Gradient_0k5ay"]
+[sub_resource type="Gradient" id="Gradient_8ei20"]
 offsets = PackedFloat32Array(0.375, 0.75625, 1)
 colors = PackedColorArray(0, 0, 0, 0, 0.81000006, 0.48266193, 0.554062, 0.81000006, 1, 0.5958789, 0.68402714, 1)
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_4s4i2"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_2ybb0"]
 seed = 6
 frequency = 0.023
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_h5upg"]
-noise = SubResource("FastNoiseLite_4s4i2")
-color_ramp = SubResource("Gradient_0k5ay")
+noise = SubResource("FastNoiseLite_2ybb0")
+color_ramp = SubResource("Gradient_8ei20")
 seamless = true
 
 [node name="BackBackground" type="Node2D" unique_id=1327382273]
@@ -112,170 +112,170 @@ autoscroll = Vector2(-480, 3)
 [node name="Kaplin" type="Sprite2D" parent="Parallax2D" unique_id=452893820]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(14.999996, 14.999992)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin2" type="Sprite2D" parent="Parallax2D" unique_id=1748135228]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(93, 263.00003)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin3" type="Sprite2D" parent="Parallax2D" unique_id=777647071]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(248.00002, 116.999985)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin4" type="Sprite2D" parent="Parallax2D" unique_id=2074452006]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(393, 238)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin5" type="Sprite2D" parent="Parallax2D" unique_id=2120350808]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(509, 50.999985)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin6" type="Sprite2D" parent="Parallax2D" unique_id=1208309104]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(542, 213.00002)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin7" type="Sprite2D" parent="Parallax2D" unique_id=1842320528]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(542, 213.00002)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin8" type="Sprite2D" parent="Parallax2D" unique_id=429297968]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(585.268, 30.78)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin9" type="Sprite2D" parent="Parallax2D" unique_id=399310574]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(663.268, 278.78003)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin10" type="Sprite2D" parent="Parallax2D" unique_id=484921382]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(818.268, 132.78)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin11" type="Sprite2D" parent="Parallax2D" unique_id=146847489]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(963.268, 253.78001)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin12" type="Sprite2D" parent="Parallax2D" unique_id=681692643]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(1079.2681, 66.77999)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin13" type="Sprite2D" parent="Parallax2D" unique_id=301502935]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(1112.2681, 228.78003)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin14" type="Sprite2D" parent="Parallax2D" unique_id=1525432956]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(1112.2681, 228.78003)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin15" type="Sprite2D" parent="Parallax2D" unique_id=1201032420]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(32.268005, 322.78)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin16" type="Sprite2D" parent="Parallax2D" unique_id=283222291]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(110.268005, 570.78)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin17" type="Sprite2D" parent="Parallax2D" unique_id=78140661]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(265.268, 424.78)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin18" type="Sprite2D" parent="Parallax2D" unique_id=2079863472]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(410.268, 545.78)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin19" type="Sprite2D" parent="Parallax2D" unique_id=1348088105]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(526.26807, 358.78)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin20" type="Sprite2D" parent="Parallax2D" unique_id=2135425989]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(559.26807, 520.78)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin21" type="Sprite2D" parent="Parallax2D" unique_id=634656475]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(559.26807, 520.78)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin22" type="Sprite2D" parent="Parallax2D" unique_id=173291083]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(583.268, 339.78)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin23" type="Sprite2D" parent="Parallax2D" unique_id=1600812985]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(661.268, 587.78)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin24" type="Sprite2D" parent="Parallax2D" unique_id=1607212929]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(816.268, 441.78)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin25" type="Sprite2D" parent="Parallax2D" unique_id=555570904]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(961.268, 562.78)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin26" type="Sprite2D" parent="Parallax2D" unique_id=1210423045]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(1077.2681, 375.78)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin27" type="Sprite2D" parent="Parallax2D" unique_id=2076645817]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(1110.2681, 537.78)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin28" type="Sprite2D" parent="Parallax2D" unique_id=731673698]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(1110.2681, 537.78)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Parallax2D2" type="Parallax2D" parent="." unique_id=818403547]
 modulate = Color(1, 1, 1, 0.42352942)
@@ -286,44 +286,44 @@ autoscroll = Vector2(-400, 9)
 [node name="Kaplin" type="Sprite2D" parent="Parallax2D2" unique_id=1495713060]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(14.999996, 14.999992)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin2" type="Sprite2D" parent="Parallax2D2" unique_id=188268497]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(93, 263.00003)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin3" type="Sprite2D" parent="Parallax2D2" unique_id=186297357]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(248.00002, 116.999985)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin4" type="Sprite2D" parent="Parallax2D2" unique_id=949704733]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(393, 238)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin5" type="Sprite2D" parent="Parallax2D2" unique_id=1120827546]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(509, 50.999985)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin6" type="Sprite2D" parent="Parallax2D2" unique_id=1800629013]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(542, 213.00002)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin7" type="Sprite2D" parent="Parallax2D2" unique_id=1778659415]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(542, 213.00002)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Parallax2D3" type="Parallax2D" parent="." unique_id=1755332251]
 modulate = Color(1, 1, 1, 0.21960784)
@@ -335,41 +335,41 @@ autoscroll = Vector2(-360, 40)
 [node name="Kaplin" type="Sprite2D" parent="Parallax2D3" unique_id=657703348]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(14.999996, 14.999992)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin2" type="Sprite2D" parent="Parallax2D3" unique_id=955195263]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(93, 263.00003)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin3" type="Sprite2D" parent="Parallax2D3" unique_id=595484551]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(248.00002, 116.999985)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin4" type="Sprite2D" parent="Parallax2D3" unique_id=1503687894]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(393, 238)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin5" type="Sprite2D" parent="Parallax2D3" unique_id=1137816868]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(509, 50.999985)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin6" type="Sprite2D" parent="Parallax2D3" unique_id=1010727783]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(542, 213.00002)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")
 
 [node name="Kaplin7" type="Sprite2D" parent="Parallax2D3" unique_id=1664137438]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(542, 213.00002)
-scale = Vector2(2.756, 2.756)
-texture = ExtResource("1_ak0ax")
+scale = Vector2(0.381, 0.381)
+texture = ExtResource("3_0k5ay")

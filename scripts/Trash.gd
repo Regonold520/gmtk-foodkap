@@ -17,3 +17,5 @@ func areaClicked(area : Area2D) -> void:
 			newParticle.color = item.Tint
 			newParticle.emitting = true
 			newParticle.finished.connect(newParticle.queue_free)
+			await get_tree().create_timer(0.9).timeout
+			newParticle.z_index = -1

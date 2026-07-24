@@ -5,6 +5,8 @@ extends Node
 @onready var holdingManager : HoldingManagerNode = get_tree().current_scene.find_child("HoldingManager")
 @onready var selectionManager : SelectionManagerNode = get_tree().current_scene.find_child("SelectionManager")
 
+var currentDestination : PlanetData
+
 func parse_json_path(path):
 	var file := FileAccess.open(path, FileAccess.READ)
 	if file:

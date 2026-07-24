@@ -7,7 +7,10 @@ extends Camera2D
 
 @export var BG : BgGenerator
 
+var active = true
+
 func _process(delta):
+	if !active: return
 	wantedX += Input.get_axis("camera_left","camera_right") * cameraSpeed
 	wantedX = min(wantedX,maxX)
 	wantedX = max(wantedX,BG.lastX - 180)

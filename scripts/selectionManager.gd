@@ -21,6 +21,8 @@ func _process(delta):
 		hoveringObject = selectionObject.get_overlapping_areas()[0]
 		if Input.is_action_just_pressed('select'):
 			clickedObject.emit(hoveringObject)
+	else:
+		hoveringObject = null
 	
 	if hoveringObject:
 		var selectedItem : IngredientResource = null
@@ -31,7 +33,8 @@ func _process(delta):
 			hoveringOverObjectDescriptor.visible = true
 		else:
 			hoveringOverObjectDescriptor.visible = false
-		
+	else:
+		hoveringOverObjectDescriptor.visible = false
 
 
 func _on_clicked_object(object : Node):

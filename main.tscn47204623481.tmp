@@ -80,19 +80,16 @@ Type = "egg"
 metadata/_custom_type_script = "uid://de02chtosiqg4"
 
 [sub_resource type="Resource" id="Resource_1bvp3"]
-resource_local_to_scene = true
 script = ExtResource("5_lquwl")
 Type = "grain"
 metadata/_custom_type_script = "uid://de02chtosiqg4"
 
 [sub_resource type="Resource" id="Resource_kek77"]
-resource_local_to_scene = true
 script = ExtResource("5_lquwl")
 Type = "grain"
 metadata/_custom_type_script = "uid://de02chtosiqg4"
 
 [sub_resource type="Resource" id="Resource_4c57u"]
-resource_local_to_scene = true
 script = ExtResource("5_lquwl")
 Type = "grain"
 metadata/_custom_type_script = "uid://de02chtosiqg4"
@@ -125,44 +122,6 @@ seamless = true
 [sub_resource type="Curve" id="Curve_3n3aq"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qsp4k"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0.101960786, 0.6431373, 0.19607843, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.058401696, 0.41739982, 0.11800388, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-corner_detail = 5
-expand_margin_left = 5.0
-expand_margin_right = 5.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kq58d"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0.011698666, 0.28811944, 0.06961399, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.029785493, 0.28687868, 0.071013264, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-corner_detail = 5
-expand_margin_left = 5.0
-expand_margin_right = 5.0
 
 [node name="Node2D" type="Node2D" unique_id=1273140]
 
@@ -569,7 +528,6 @@ Camera = NodePath("../Camera2D")
 planetDataDisplay = NodePath("CanvasLayer/Panel")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="SelectorUIManager" unique_id=922740644]
-visible = false
 
 [node name="Control" type="Control" parent="SelectorUIManager/CanvasLayer" unique_id=1770802435]
 layout_mode = 3
@@ -647,35 +605,21 @@ texture = ExtResource("19_cegan")
 flip_h = true
 
 [node name="Panel" type="PanelContainer" parent="SelectorUIManager/CanvasLayer" unique_id=587086125]
-offset_left = 1027.0
-offset_top = -789.0
-offset_right = 1183.0
-offset_bottom = -670.0
+offset_left = 463.0
+offset_top = -292.0
+offset_right = 597.0
+offset_bottom = -173.0
 offset_transform_enabled = true
 offset_transform_position = Vector2(56.69, -38.155)
-offset_transform_visual_only = false
-mouse_filter = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="SelectorUIManager/CanvasLayer/Panel" unique_id=731765317]
 layout_mode = 2
-mouse_filter = 2
 bbcode_enabled = true
 text = "bb
 [hr]
 hfdvhgsdgfhik,jgsfd,"
 fit_content = true
 autowrap_mode = 0
-
-[node name="Button" type="Button" parent="SelectorUIManager/CanvasLayer/Panel" unique_id=1492836860]
-layout_mode = 2
-size_flags_vertical = 0
-offset_transform_enabled = true
-offset_transform_position_ratio = Vector2(0, -1.05)
-offset_transform_visual_only = false
-theme_override_styles/normal = SubResource("StyleBoxFlat_qsp4k")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_kq58d")
-theme_override_styles/hover = SubResource("StyleBoxFlat_qsp4k")
-text = "SELECT"
 
 [node name="MealManager" type="Node" parent="." unique_id=511598956 node_paths=PackedStringArray("RemainingLabel", "infoPanel")]
 script = ExtResource("27_qsp4k")
@@ -767,4 +711,3 @@ Desired Meal Size:"
 
 [connection signal="clickedObject" from="SelectionManager" to="HoldingManager" method="_on_selection_manager_clicked_object"]
 [connection signal="clickedObject" from="SelectionManager" to="SelectionManager" method="_on_clicked_object"]
-[connection signal="pressed" from="SelectorUIManager/CanvasLayer/Panel/Button" to="SelectorUIManager" method="_on_select_button_pressed"]
