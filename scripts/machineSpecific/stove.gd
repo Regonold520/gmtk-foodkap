@@ -18,6 +18,7 @@ func run(_delta = 0) -> void:
 			
 			if slot.item.get_meta("stove_progress") >= 1.0:
 				if mData.get("recipes",{}).has(slot.item.Type):
+					slot.item.EffectTags.erase("Inedible")
 					slot.item.Type = mData["recipes"][slot.item.Type]
 					slot.item.Tint = Color.WHITE
 					slot.item.set_meta("stove_progress",0.0)

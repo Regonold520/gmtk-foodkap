@@ -1,0 +1,98 @@
+{
+	"bread": {
+		"flavorText":"An earth classic!",
+		"rating":3,
+		"size":2
+	},
+	"breadslice": {
+		"flavorText":"Nothing getes better than this!",
+		"rating":3.5,
+		"size":0
+	},
+	"burntScraps":{
+		"flavorText":"Throw this out the window!",
+		"rating":0,
+		"tags":["Inedible"],
+		"size":0
+	},
+	"dough":{
+		"flavorText":"Making dough to make dough?",
+		"rating":0.5,
+		"tags":["Inedible"],
+		"size":1
+	},
+	"egg":{
+		"flavorText":"It is an egg from an avian creature. There is no creature inside.",
+		"rating":1,
+		"size":0,
+		"baseIngredient":true
+	},
+	"grain":{
+		"flavorText":"Its some sort of grain.",
+		"rating":1,
+		"size":0,
+		"baseIngredient":true
+	},
+	"flour":{
+		"flavorText":"Dont try smelling these flowers.",
+		"rating":0.5,
+		"tags":["Inedible"],
+		"size":0
+	},
+	
+	"sugar":{
+		"flavorText":"Yum!",
+		"rating":1,
+		"tags":["Sugary"],
+		"baseIngredient":true,
+		"size":0
+	},
+	"caramel":{
+		"flavorText":"Yum! Yum!",
+		"rating":1.5,
+		"tags":["Sugary"],
+		"size":0
+	},
+	"pastaDough":{
+		"flavorText":"Dough, but just a bit different",
+		"rating":0.5,
+		"tags":["Inedible"],
+		"size":1
+	},
+	"pasta": {
+		"flavorText":"Its like bread! But Different!",
+		"rating":3,
+		"size":2
+	},
+	"indigoSeeds": {
+		"flavorText":"A classic flavoring agent, common on planets with low amounts of water. Cook it!",
+		"rating":1,
+		"size":0,
+		"tags":["Inedible"],
+		"baseIngredient":true
+	},
+	"indigoSpice": {
+		"flavorText":"A classic flavoring agent. Has a smoky flavor!",
+		"rating":1.5,
+		"size":0,
+		"tags":["Indigo-flavored"]
+	},
+	"indigoPasta":{
+		"flavorText":"Noodles with a little more kick!",
+		"rating":4,
+		"size":2,
+		"tags":["Indigo-flavored"]
+	},
+	"overslicedScraps":{
+		"flavorText":"Its sliced to the point of unrecognizability, turning into a fine dust. Throw this out the window!",
+		"rating":0,
+		"size":1,
+		"tags":["Inedible"]
+	},
+	"mix":{
+		"flavorText":"A little bit of this, and a little bit of that.",
+		"rating":2.75,
+		"size":1,
+	}
+	
+}

@@ -131,3 +131,4 @@ func _on_select_button_pressed():
 	$"../SelectionManager".running = true
 	Camera.active = true
 	planetDataDisplay.global_position = Vector2.ONE * 2000
+	$"../MealManager".updateAll()

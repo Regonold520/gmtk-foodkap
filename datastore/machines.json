@@ -5,12 +5,15 @@
 		"width":2,
 		"recipes": {
 			"testFood":"otherTestFood",
-			"dough":"bread"
+			"dough":"bread",
+			"sugar":"caramel",
+			"pastaDough":"pasta",
+			"indigoSeeds":"indigoSpice"
 		}
 	},
 	"blender":{
 		"runTime":5,
-		"fallbackType":"burntScraps",
+		"fallbackType":"overslicedScraps",
 		"width":1,
 		"recipes": {
 			"grain":"flour",
@@ -19,10 +22,19 @@
 	},
 	"cuttingboard":{
 		"runTime":5.0,
-		"fallbackType":"burntScraps",
+		"fallbackType":"overslicedScraps",
 		"width":1,
 		"recipes": {
-			"bread":"breadslice"
+			"bread":"breadslice",
+			"dough":"pastaDough",
+		}
+	},
+	"mixer":{
+		"runTime":5.0,
+		"fallbackType":"mix",
+		"width":1,
+		"recipesResultKey":{
+			"indigoPasta":["indigoSpice","pasta"]
 		}
 	}
 }

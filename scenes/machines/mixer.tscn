@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://cqr6v3il44gxb"]
+
+[ext_resource type="Script" uid="uid://bc2nhbxpsqbie" path="res://scripts/machineSpecific/mixer.gd" id="1_6dcph"]
+[ext_resource type="Texture2D" uid="uid://bkl1wg1iteywy" path="res://assets/machines/singleContainer.png" id="2_6dcph"]
+[ext_resource type="PackedScene" uid="uid://blk14fdp1rcc6" path="res://scenes/ingredientBox.tscn" id="3_ex77r"]
+[ext_resource type="Texture2D" uid="uid://b6ju3xp0u5fm8" path="res://assets/machines/countertop.png" id="4_53l8s"]
+[ext_resource type="Texture2D" uid="uid://dftiwpt4ectcg" path="res://assets/ingredients/mixer.png" id="5_ex77r"]
+[ext_resource type="Script" uid="uid://cu2b7000l0gfw" path="res://scripts/machineStarter.gd" id="6_seuhx"]
+[ext_resource type="Script" uid="uid://dhinuyab5vpm" path="res://scripts/machineSlot.gd" id="7_kpy46"]
+[ext_resource type="Script" uid="uid://cs0sbb3q5o2qs" path="res://scripts/textureOffset.gd" id="8_to63m"]
+[ext_resource type="Texture2D" uid="uid://cr3jykc53ouv3" path="res://assets/ingredients/caramel.png" id="9_53l8s"]
+[ext_resource type="Texture2D" uid="uid://cg77hijyxxnqb" path="res://icon.svg" id="9_nrhxh"]
+
+[sub_resource type="Gradient" id="Gradient_mlghm"]
+offsets = PackedFloat32Array(0, 0.21794872, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.6025641, 1, 1, 1, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mltvj"]
+radius = 3.687821
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nnkmn"]
+size = Vector2(13.600001, 13.2)
+
+[node name="Machine" type="Node2D" unique_id=2047287072 node_paths=PackedStringArray("slots")]
+scale = Vector2(2.5, 2.5)
+script = ExtResource("1_6dcph")
+slots = [NodePath("Slots/1"), NodePath("Slots/2")]
+id = "mixer"
+
+[node name="Container" type="Sprite2D" parent="." unique_id=1157874640]
+position = Vector2(0, 22.8)
+scale = Vector2(0.99999976, 0.99999976)
+texture = ExtResource("2_6dcph")
+
+[node name="Left" parent="Container" unique_id=961949610 instance=ExtResource("3_ex77r")]
+position = Vector2(-1.9073486e-06, 1.2000077)
+scale = Vector2(0.39999995, 0.39999995)
+
+[node name="Counter" type="Sprite2D" parent="." unique_id=1196010105]
+position = Vector2(0, 1.5258788e-06)
+scale = Vector2(0.9999998, 0.9999998)
+texture = ExtResource("4_53l8s")
+
+[node name="Particles" type="CPUParticles2D" parent="." unique_id=284009227]
+position = Vector2(0, -32.4)
+scale = Vector2(0.99999994, 0.99999994)
+emitting = false
+amount = 6
+lifetime = 0.6
+direction = Vector2(0, -1)
+gravity = Vector2(0, 1960)
+initial_velocity_min = 240.74
+initial_velocity_max = 240.74
+scale_amount_min = 10.0
+scale_amount_max = 15.0
+color_ramp = SubResource("Gradient_mlghm")
+
+[node name="Visual" type="Sprite2D" parent="." unique_id=146211639]
+position = Vector2(-0.8, -21.199999)
+texture = ExtResource("5_ex77r")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1686640489]
+position = Vector2(8.8, -16.4)
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("6_seuhx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1442546456]
+shape = SubResource("CircleShape2D_mltvj")
+
+[node name="ProgressBar" type="TextureProgressBar" parent="." unique_id=1902962755]
+offset_left = -7.599998
+offset_top = 1.5999999
+offset_right = 120.4
+offset_bottom = 129.6
+scale = Vector2(0.114910156, 0.114910156)
+max_value = 1.0
+step = 0.01
+fill_mode = 4
+texture_progress = ExtResource("9_nrhxh")
+
+[node name="Slots" type="Node2D" parent="." unique_id=807926907]
+
+[node name="1" type="Area2D" parent="Slots" unique_id=2091971503]
+position = Vector2(-9.599999, -26.4)
+script = ExtResource("7_kpy46")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slots/1" unique_id=1282507560]
+position = Vector2(-2.861023e-06, -5)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_nnkmn")
+
+[node name="Food" type="Sprite2D" parent="Slots/1" unique_id=2089661783]
+texture = ExtResource("9_53l8s")
+offset = Vector2(0, -6)
+script = ExtResource("8_to63m")
+
+[node name="2" type="Area2D" parent="Slots" unique_id=1453186642]
+position = Vector2(8.399999, -26.4)
+script = ExtResource("7_kpy46")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slots/2" unique_id=1995570590]
+position = Vector2(-2.861023e-06, -5)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_nnkmn")
+
+[node name="Food" type="Sprite2D" parent="Slots/2" unique_id=2095950262]
+texture = ExtResource("9_53l8s")
+offset = Vector2(0, -6)
+script = ExtResource("8_to63m")

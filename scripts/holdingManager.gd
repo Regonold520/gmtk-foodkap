@@ -7,6 +7,8 @@ class_name HoldingManagerNode
 
 @export var ItemDataDisplay : IngredientDisplayControlNode
 
+@export var MealManag: MealManager
+
 var inHand : IngredientResource = null:
 	set(item):
 		inHand = item
@@ -37,6 +39,11 @@ func _on_selection_manager_clicked_object(object : Node):
 				object.addItemToTop(inHand)
 				inHand = null
 		object.displayItems()
+	
+	if object is MealDropoff:
+		if MealManag.meals.size() < Ref.currentDestination.MealCount:
+			MealManag.addMeal(inHand)
+			inHand = null
 	
 func _process(delta):
 	if inHand:

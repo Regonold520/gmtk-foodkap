@@ -29,6 +29,8 @@
 [ext_resource type="Script" uid="uid://c38j6j4rprjum" path="res://scripts/meal_manager.gd" id="27_qsp4k"]
 [ext_resource type="Texture2D" uid="uid://cjkinayidnaa1" path="res://assets/machines/mealInserter.png" id="27_xuqvo"]
 [ext_resource type="Texture2D" uid="uid://fweqt8ota4ag" path="res://assets/machines/MealTitle.png" id="28_qsp4k"]
+[ext_resource type="Script" uid="uid://017astwlajdp" path="res://scripts/DayEndManager.gd" id="30_kq58d"]
+[ext_resource type="Script" uid="uid://rwy7v62iklgi" path="res://scripts/MealDropoff.gd" id="30_seu75"]
 
 [sub_resource type="Gradient" id="Gradient_1h7o1"]
 colors = PackedColorArray(0.2946382, 3.218744e-07, 8.4228816e-08, 1, 1, 1, 1, 1)
@@ -79,19 +81,83 @@ script = ExtResource("5_lquwl")
 Type = "egg"
 metadata/_custom_type_script = "uid://de02chtosiqg4"
 
-[sub_resource type="Resource" id="Resource_1bvp3"]
+[sub_resource type="Resource" id="Resource_htxhm"]
 resource_local_to_scene = true
 script = ExtResource("5_lquwl")
 Type = "grain"
 metadata/_custom_type_script = "uid://de02chtosiqg4"
 
-[sub_resource type="Resource" id="Resource_kek77"]
+[sub_resource type="Resource" id="Resource_jq2sk"]
 resource_local_to_scene = true
 script = ExtResource("5_lquwl")
 Type = "grain"
 metadata/_custom_type_script = "uid://de02chtosiqg4"
 
-[sub_resource type="Resource" id="Resource_4c57u"]
+[sub_resource type="Resource" id="Resource_4k2k6"]
+resource_local_to_scene = true
+script = ExtResource("5_lquwl")
+Type = "grain"
+metadata/_custom_type_script = "uid://de02chtosiqg4"
+
+[sub_resource type="Resource" id="Resource_0rl1p"]
+resource_local_to_scene = true
+script = ExtResource("5_lquwl")
+Type = "grain"
+metadata/_custom_type_script = "uid://de02chtosiqg4"
+
+[sub_resource type="Resource" id="Resource_ok6jj"]
+resource_local_to_scene = true
+script = ExtResource("5_lquwl")
+Type = "grain"
+metadata/_custom_type_script = "uid://de02chtosiqg4"
+
+[sub_resource type="Resource" id="Resource_facbu"]
+resource_local_to_scene = true
+script = ExtResource("5_lquwl")
+Type = "grain"
+metadata/_custom_type_script = "uid://de02chtosiqg4"
+
+[sub_resource type="Resource" id="Resource_b1qrp"]
+resource_local_to_scene = true
+script = ExtResource("5_lquwl")
+Type = "grain"
+metadata/_custom_type_script = "uid://de02chtosiqg4"
+
+[sub_resource type="Resource" id="Resource_come4"]
+resource_local_to_scene = true
+script = ExtResource("5_lquwl")
+Type = "grain"
+metadata/_custom_type_script = "uid://de02chtosiqg4"
+
+[sub_resource type="Resource" id="Resource_h8e4i"]
+resource_local_to_scene = true
+script = ExtResource("5_lquwl")
+Type = "grain"
+metadata/_custom_type_script = "uid://de02chtosiqg4"
+
+[sub_resource type="Resource" id="Resource_6dcph"]
+script = ExtResource("5_lquwl")
+Type = "indigoSeeds"
+metadata/_custom_type_script = "uid://de02chtosiqg4"
+
+[sub_resource type="Resource" id="Resource_ex77r"]
+script = ExtResource("5_lquwl")
+Type = "indigoSeeds"
+metadata/_custom_type_script = "uid://de02chtosiqg4"
+
+[sub_resource type="Resource" id="Resource_4lmeg"]
+resource_local_to_scene = true
+script = ExtResource("5_lquwl")
+Type = "grain"
+metadata/_custom_type_script = "uid://de02chtosiqg4"
+
+[sub_resource type="Resource" id="Resource_0cp0l"]
+resource_local_to_scene = true
+script = ExtResource("5_lquwl")
+Type = "grain"
+metadata/_custom_type_script = "uid://de02chtosiqg4"
+
+[sub_resource type="Resource" id="Resource_d2t1y"]
 resource_local_to_scene = true
 script = ExtResource("5_lquwl")
 Type = "grain"
@@ -163,6 +229,9 @@ corner_radius_bottom_left = 3
 corner_detail = 5
 expand_margin_left = 5.0
 expand_margin_right = 5.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1h7o1"]
+size = Vector2(54.799957, 10.000004)
 
 [node name="Node2D" type="Node2D" unique_id=1273140]
 
@@ -317,10 +386,11 @@ texture = ExtResource("1_efxa6")
 position = Vector2(-278, 15)
 texture = ExtResource("1_efxa6")
 
-[node name="HoldingManager" type="Node" parent="." unique_id=280262521 node_paths=PackedStringArray("ItemHeldVisual", "ItemDataDisplay")]
+[node name="HoldingManager" type="Node" parent="." unique_id=280262521 node_paths=PackedStringArray("ItemHeldVisual", "ItemDataDisplay", "MealManag")]
 script = ExtResource("1_ig7tw")
 ItemHeldVisual = NodePath("SubViewport/Node2D/TestFood")
 ItemDataDisplay = NodePath("SubViewport/HBoxContainer/VBoxContainer/Top")
+MealManag = NodePath("../MealManager")
 
 [node name="SubViewport" type="CanvasLayer" parent="HoldingManager" unique_id=1754174165]
 
@@ -502,7 +572,7 @@ ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_hgxv0")])
 position = Vector2(17.599998, 1.2000077)
 scale = Vector2(0.39999995, 0.39999995)
 canRecieveNewItemsIfEmpty = false
-ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_1bvp3"), SubResource("Resource_kek77"), SubResource("Resource_4c57u")])
+ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_htxhm"), SubResource("Resource_jq2sk"), SubResource("Resource_4k2k6")])
 
 [node name="DeepFreezer4" type="Sprite2D" parent="." unique_id=771303666]
 position = Vector2(543, 201.99998)
@@ -518,7 +588,7 @@ canRecieveNewItemsIfEmpty = false
 position = Vector2(17.599998, 1.2000077)
 scale = Vector2(0.39999995, 0.39999995)
 canRecieveNewItemsIfEmpty = false
-ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_1bvp3"), SubResource("Resource_kek77"), SubResource("Resource_4c57u")])
+ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_0rl1p"), SubResource("Resource_ok6jj"), SubResource("Resource_facbu")])
 
 [node name="DeepFreezer3" type="Sprite2D" parent="." unique_id=905716188]
 position = Vector2(543, 160)
@@ -534,7 +604,7 @@ canRecieveNewItemsIfEmpty = false
 position = Vector2(17.599998, 1.2000077)
 scale = Vector2(0.39999995, 0.39999995)
 canRecieveNewItemsIfEmpty = false
-ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_1bvp3"), SubResource("Resource_kek77"), SubResource("Resource_4c57u")])
+ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_b1qrp"), SubResource("Resource_come4"), SubResource("Resource_h8e4i")])
 
 [node name="DeepFreezer2" type="Sprite2D" parent="." unique_id=824760828]
 position = Vector2(543, 118)
@@ -545,12 +615,13 @@ texture = ExtResource("13_getpj")
 position = Vector2(-17.2, 1.2000077)
 scale = Vector2(0.39999995, 0.39999995)
 canRecieveNewItemsIfEmpty = false
+ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_6dcph"), SubResource("Resource_ex77r")])
 
 [node name="Right" parent="DeepFreezer2" unique_id=1334110125 instance=ExtResource("2_0xm2m")]
 position = Vector2(17.599998, 1.2000077)
 scale = Vector2(0.39999995, 0.39999995)
 canRecieveNewItemsIfEmpty = false
-ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_1bvp3"), SubResource("Resource_kek77"), SubResource("Resource_4c57u")])
+ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_4lmeg"), SubResource("Resource_0cp0l"), SubResource("Resource_d2t1y")])
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=325803655 node_paths=PackedStringArray("BG")]
 position = Vector2(730, 162)
@@ -729,6 +800,14 @@ text = "20"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Area2D" type="Area2D" parent="MealManager/MealInserter" unique_id=472029997]
+script = ExtResource("30_seu75")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MealManager/MealInserter/Area2D" unique_id=1754013931]
+position = Vector2(0.20007324, 1.3999863)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_1h7o1")
+
 [node name="NinePatchRect" type="NinePatchRect" parent="MealManager" unique_id=701547544]
 self_modulate = Color(0.12941177, 0.36862746, 0.28627452, 1)
 clip_children = 2
@@ -764,6 +843,9 @@ theme_override_colors/default_color = Color(0.31764707, 1, 0.3254902, 1)
 theme_override_font_sizes/normal_font_size = 13
 text = "Destination: A-B-V-G-H
 Desired Meal Size:"
+
+[node name="DayEndManager" type="Node" parent="." unique_id=100021437]
+script = ExtResource("30_kq58d")
 
 [connection signal="clickedObject" from="SelectionManager" to="HoldingManager" method="_on_selection_manager_clicked_object"]
 [connection signal="clickedObject" from="SelectionManager" to="SelectionManager" method="_on_clicked_object"]

@@ -32,6 +32,8 @@ func _ready():
 	addMachine("stove")
 	addMachine("cuttingboard")
 	addMachine("blender")
+	addMachine("mixer")
+
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_down"):
