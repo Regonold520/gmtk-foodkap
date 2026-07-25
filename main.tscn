@@ -34,6 +34,7 @@
 [ext_resource type="Script" uid="uid://cfk32ygebby2c" path="res://scripts/TimerManager.gd" id="32_htxhm"]
 [ext_resource type="AudioStream" uid="uid://ckrpbnt0gejum" path="res://sfx/freesound_community-gong-92707.mp3" id="33_jq2sk"]
 [ext_resource type="Texture2D" uid="uid://dkcxdjppq43gj" path="res://assets/uiAndBg/octagon.png" id="34_4k2k6"]
+[ext_resource type="Texture2D" uid="uid://buligik6dj73g" path="res://assets/ingredients/kaplin.png" id="35_0rl1p"]
 
 [sub_resource type="Gradient" id="Gradient_1h7o1"]
 colors = PackedColorArray(0.2946382, 3.218744e-07, 8.4228816e-08, 1, 1, 1, 1, 1)
@@ -84,24 +85,6 @@ script = ExtResource("5_lquwl")
 Type = "egg"
 metadata/_custom_type_script = "uid://de02chtosiqg4"
 
-[sub_resource type="Resource" id="Resource_htxhm"]
-resource_local_to_scene = true
-script = ExtResource("5_lquwl")
-Type = "grain"
-metadata/_custom_type_script = "uid://de02chtosiqg4"
-
-[sub_resource type="Resource" id="Resource_jq2sk"]
-resource_local_to_scene = true
-script = ExtResource("5_lquwl")
-Type = "grain"
-metadata/_custom_type_script = "uid://de02chtosiqg4"
-
-[sub_resource type="Resource" id="Resource_4k2k6"]
-resource_local_to_scene = true
-script = ExtResource("5_lquwl")
-Type = "grain"
-metadata/_custom_type_script = "uid://de02chtosiqg4"
-
 [sub_resource type="Resource" id="Resource_0rl1p"]
 resource_local_to_scene = true
 script = ExtResource("5_lquwl")
@@ -138,16 +121,6 @@ script = ExtResource("5_lquwl")
 Type = "grain"
 metadata/_custom_type_script = "uid://de02chtosiqg4"
 
-[sub_resource type="Resource" id="Resource_6dcph"]
-script = ExtResource("5_lquwl")
-Type = "indigoSeeds"
-metadata/_custom_type_script = "uid://de02chtosiqg4"
-
-[sub_resource type="Resource" id="Resource_ex77r"]
-script = ExtResource("5_lquwl")
-Type = "indigoSeeds"
-metadata/_custom_type_script = "uid://de02chtosiqg4"
-
 [sub_resource type="Resource" id="Resource_4lmeg"]
 resource_local_to_scene = true
 script = ExtResource("5_lquwl")
@@ -161,6 +134,34 @@ Type = "grain"
 metadata/_custom_type_script = "uid://de02chtosiqg4"
 
 [sub_resource type="Resource" id="Resource_d2t1y"]
+resource_local_to_scene = true
+script = ExtResource("5_lquwl")
+Type = "grain"
+metadata/_custom_type_script = "uid://de02chtosiqg4"
+
+[sub_resource type="Resource" id="Resource_6dcph"]
+script = ExtResource("5_lquwl")
+Type = "indigoSeeds"
+metadata/_custom_type_script = "uid://de02chtosiqg4"
+
+[sub_resource type="Resource" id="Resource_ex77r"]
+script = ExtResource("5_lquwl")
+Type = "indigoSeeds"
+metadata/_custom_type_script = "uid://de02chtosiqg4"
+
+[sub_resource type="Resource" id="Resource_gngh3"]
+resource_local_to_scene = true
+script = ExtResource("5_lquwl")
+Type = "grain"
+metadata/_custom_type_script = "uid://de02chtosiqg4"
+
+[sub_resource type="Resource" id="Resource_0n3wm"]
+resource_local_to_scene = true
+script = ExtResource("5_lquwl")
+Type = "grain"
+metadata/_custom_type_script = "uid://de02chtosiqg4"
+
+[sub_resource type="Resource" id="Resource_qnost"]
 resource_local_to_scene = true
 script = ExtResource("5_lquwl")
 Type = "grain"
@@ -599,7 +600,7 @@ ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_hgxv0")])
 position = Vector2(17.599998, 1.2000077)
 scale = Vector2(0.39999995, 0.39999995)
 canRecieveNewItemsIfEmpty = false
-ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_htxhm"), SubResource("Resource_jq2sk"), SubResource("Resource_4k2k6")])
+ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_0rl1p"), SubResource("Resource_ok6jj"), SubResource("Resource_facbu")])
 
 [node name="DeepFreezer4" type="Sprite2D" parent="." unique_id=771303666]
 position = Vector2(543, 201.99998)
@@ -615,7 +616,7 @@ canRecieveNewItemsIfEmpty = false
 position = Vector2(17.599998, 1.2000077)
 scale = Vector2(0.39999995, 0.39999995)
 canRecieveNewItemsIfEmpty = false
-ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_0rl1p"), SubResource("Resource_ok6jj"), SubResource("Resource_facbu")])
+ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_b1qrp"), SubResource("Resource_come4"), SubResource("Resource_h8e4i")])
 
 [node name="DeepFreezer3" type="Sprite2D" parent="." unique_id=905716188]
 position = Vector2(543, 160)
@@ -631,7 +632,7 @@ canRecieveNewItemsIfEmpty = false
 position = Vector2(17.599998, 1.2000077)
 scale = Vector2(0.39999995, 0.39999995)
 canRecieveNewItemsIfEmpty = false
-ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_b1qrp"), SubResource("Resource_come4"), SubResource("Resource_h8e4i")])
+ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_4lmeg"), SubResource("Resource_0cp0l"), SubResource("Resource_d2t1y")])
 
 [node name="DeepFreezer2" type="Sprite2D" parent="." unique_id=824760828]
 position = Vector2(543, 118)
@@ -648,7 +649,7 @@ ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_6dcph"), Su
 position = Vector2(17.599998, 1.2000077)
 scale = Vector2(0.39999995, 0.39999995)
 canRecieveNewItemsIfEmpty = false
-ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_4lmeg"), SubResource("Resource_0cp0l"), SubResource("Resource_d2t1y")])
+ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_gngh3"), SubResource("Resource_0n3wm"), SubResource("Resource_qnost")])
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=325803655 node_paths=PackedStringArray("BG")]
 position = Vector2(730, 162)
@@ -916,9 +917,12 @@ vertical_alignment = 1
 [node name="FreesoundCommunityGong92707" type="AudioStreamPlayer" parent="TimerStuff" unique_id=1308499579]
 stream = ExtResource("33_jq2sk")
 
-[node name="DayEndManager" type="Node" parent="." unique_id=100021437 node_paths=PackedStringArray("mealManager")]
+[node name="DayEndManager" type="Node" parent="." unique_id=100021437 node_paths=PackedStringArray("mealManager", "percentageDisplay", "financeDisplay", "ReviewLabels")]
 script = ExtResource("30_kq58d")
 mealManager = NodePath("../MealManager")
+percentageDisplay = NodePath("CanvasLayer/Control/Percentage")
+financeDisplay = NodePath("CanvasLayer/Control/Panel/Money")
+ReviewLabels = [NodePath("CanvasLayer/Control/Review1"), NodePath("CanvasLayer/Control/Review2"), NodePath("CanvasLayer/Control/Review3"), NodePath("CanvasLayer/Control/Review4")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="DayEndManager" unique_id=74777889]
 
@@ -928,9 +932,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 1.0
-offset_top = -1.0
+offset_top = 651.0
 offset_right = 1.0
-offset_bottom = -1.0
+offset_bottom = 651.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -984,9 +988,9 @@ texture = SubResource("NoiseTexture2D_ryguw")
 
 [node name="Label" type="Label" parent="DayEndManager/CanvasLayer/Control" unique_id=1880014847]
 layout_mode = 0
-offset_left = 27.0
+offset_left = 46.0
 offset_top = 27.0
-offset_right = 727.0
+offset_right = 398.0
 offset_bottom = 109.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 29
@@ -997,18 +1001,27 @@ vertical_alignment = 1
 
 [node name="Panel" type="Panel" parent="DayEndManager/CanvasLayer/Control" unique_id=1240354447]
 layout_mode = 0
-offset_left = 80.0
-offset_top = 273.0
-offset_right = 320.0
-offset_bottom = 608.0
+offset_left = 44.0
+offset_top = 111.0
+offset_right = 402.0
+offset_bottom = 446.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="DayEndManager/CanvasLayer/Control/Panel" unique_id=1489166307]
+[node name="Money" type="RichTextLabel" parent="DayEndManager/CanvasLayer/Control/Panel" unique_id=1606368716]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 26
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "Order Placements [right]+300$ [left]Missed Orders [right]-50$
+[left]Tips[right]+30$
+[hr]
+Today: +30$
+[b]TOTAL: 300$"
+fit_content = true
 
 [node name="Octagon" type="Sprite2D" parent="DayEndManager/CanvasLayer/Control" unique_id=1925921603]
 modulate = Color(1, 1, 1, 0.1882353)
@@ -1017,15 +1030,116 @@ rotation = -0.5013137
 scale = Vector2(3.5394268, 3.5394268)
 texture = ExtResource("34_4k2k6")
 
-[node name="Label2" type="Label" parent="DayEndManager/CanvasLayer/Control" unique_id=1153769713]
+[node name="Percentage" type="Label" parent="DayEndManager/CanvasLayer/Control" unique_id=1153769713]
 layout_mode = 0
-offset_left = 874.99994
-offset_top = 72.999985
-offset_right = 1052.0
-offset_bottom = 193.99998
+offset_left = 724.03186
+offset_top = 41.7759
+offset_right = 1216.0513
+offset_bottom = 162.77591
 rotation = 0.20395009
 theme_override_font_sizes/font_size = 88
 text = "85%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="DayEndManager/CanvasLayer/Control" unique_id=1453459520]
+layout_mode = 0
+offset_left = 428.99997
+offset_top = 226.0
+offset_right = 1207.0
+offset_bottom = 308.0
+rotation = -0.041319143
+scale = Vector2(0.5113869, 0.5113869)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 29
+theme_override_font_sizes/font_size = 59
+text = "Here are your new reviews!"
+horizontal_alignment = 1
+
+[node name="Review1" type="Label" parent="DayEndManager/CanvasLayer/Control" unique_id=1795680048]
+layout_mode = 0
+offset_left = 453.0
+offset_top = 264.0
+offset_right = 828.0
+offset_bottom = 296.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 11
+theme_override_font_sizes/font_size = 22
+text = "I LOVED THIS FOOD!"
+horizontal_alignment = 1
+
+[node name="Review2" type="Label" parent="DayEndManager/CanvasLayer/Control" unique_id=46101153]
+layout_mode = 0
+offset_left = 401.0
+offset_top = 303.0
+offset_right = 776.0
+offset_bottom = 335.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 11
+theme_override_font_sizes/font_size = 22
+text = "I HATE THIS FOOD!"
+horizontal_alignment = 1
+
+[node name="Review3" type="Label" parent="DayEndManager/CanvasLayer/Control" unique_id=1577808842]
+layout_mode = 0
+offset_left = 454.0
+offset_top = 340.0
+offset_right = 829.0
+offset_bottom = 372.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 11
+theme_override_font_sizes/font_size = 22
+text = "I INDIFFER THIS FOOD!"
+horizontal_alignment = 1
+
+[node name="Review4" type="Label" parent="DayEndManager/CanvasLayer/Control" unique_id=553197006]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 378.0
+offset_right = 785.0
+offset_bottom = 410.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 11
+theme_override_font_sizes/font_size = 22
+text = "I INDIFFER THIS FOOD!"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="DayEndManager/CanvasLayer/Control" unique_id=1419188917]
+layout_mode = 0
+offset_left = 881.0
+offset_top = 549.0
+offset_right = 1121.0
+offset_bottom = 620.0
+theme_override_font_sizes/font_size = 45
+text = "CONTINUE"
+
+[node name="Foodtruck" type="Sprite2D" parent="DayEndManager/CanvasLayer/Control" unique_id=1586956130]
+modulate = Color(0.9647059, 0.9647059, 0.9647059, 0.6039216)
+position = Vector2(774, 563)
+scale = Vector2(5.665, 5.665)
+texture = ExtResource("19_cegan")
+flip_h = true
+
+[node name="TextureRect" type="TextureRect" parent="DayEndManager/CanvasLayer/Control" unique_id=1605402737]
+modulate = Color(1, 1, 1, 0.18431373)
+layout_mode = 0
+offset_left = 55.0
+offset_top = 557.0
+offset_right = 98.92517
+offset_bottom = 559.0
+scale = Vector2(14.342573, 14.622326)
+texture = ExtResource("19_ryguw")
+stretch_mode = 1
+
+[node name="Kaplin" type="Sprite2D" parent="DayEndManager/CanvasLayer/Control" unique_id=1365191778]
+modulate = Color(1, 1, 1, 0.02745098)
+position = Vector2(990, 406)
+texture = ExtResource("35_0rl1p")
 
 [connection signal="clickedObject" from="SelectionManager" to="HoldingManager" method="_on_selection_manager_clicked_object"]
 [connection signal="clickedObject" from="SelectionManager" to="SelectionManager" method="_on_clicked_object"]

@@ -23,6 +23,8 @@ func timerFinished():
 	$CanvasLayer/ColorRect.visible = true
 	secondsTimer.stop()
 	$FreesoundCommunityGong92707.play()
+	await get_tree().create_timer(2).timeout
+	$"../DayEndManager".endDay()
 
 func format_time(total_seconds: int) -> String:
 	var minutes: int = total_seconds / 60
