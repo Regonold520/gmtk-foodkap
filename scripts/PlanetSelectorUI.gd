@@ -14,7 +14,7 @@ var NodeToData = {}
 var buttonGroup = ButtonGroup
 
 var currentPlanetClicked
-var currentPlanetDataHovered
+var currentPlanetDataHovered : PlanetData
 func startSelection():
 	var newTween = create_tween()
 	newTween.set_ease(Tween.EASE_OUT)
@@ -30,7 +30,7 @@ func startSelection():
 func _ready():
 	get_child(0).visible = true
 	startSelection()
-	generatePlanets()
+	generatePlanets(5,0.3)
 
 func _process(delta):
 	if display: 
@@ -87,7 +87,7 @@ func generatePlanets(amount = 5,difficulty = 1):
 		I.find_child("Button").pressed.connect(select.bind(I))
 	for I in circleNodes:
 		var dist = I.global_position.distance_squared_to(constantPlanet.global_position)
-		var newData : PlanetData = PlanetData.new(1,dist)
+		var newData : PlanetData = PlanetData.new(difficulty,dist)
 		NodeToData[I] = newData
 
 var cutoffX = 1060
@@ -105,6 +105,9 @@ func select(Selected : PlanetUI):
 	displayText.text += "Estimated Arrival Time: " + str(planetData.TimeToArrive ) + "\n"
 	displayText.text += "Meal Count: " + str(planetData.MealCount)  + "\n"
 	displayText.text += "Meal Size: " + str(planetData.MealSizes.find_key(planetData.DesiredMealSize))  + "\n"
+	displayText.text += "[hr]"  + "\n"
+	var capitalized_array = planetData.FavoredMeals.map(func(s: String): return s.capitalize())
+	displayText.text += "Favored Meals: " + ", ".join(capitalized_array) + "\n"
 	
 	await RenderingServer.frame_post_draw
 	var outerX = Selected.global_position.x + planetDataDisplay.size.x
@@ -132,3 +135,4 @@ func _on_select_button_pressed():
 	Camera.active = true
 	planetDataDisplay.global_position = Vector2.ONE * 2000
 	$"../MealManager".updateAll()
+	$"../TimerStuff".startTimer(currentPlanetDataHovered.TimeToArrive)

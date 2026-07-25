@@ -39,7 +39,7 @@ func run(_delta = 0) -> void:
 			for i in slots:
 				for e in i.item.EffectTags:
 					newItem.addTag(e)
-			newItem.EffectTags.erase("cut")
+			newItem.EffectTags.erase("Cut")
 			for slot in slots:
 				slot.interactable = true
 				slot.item = null
