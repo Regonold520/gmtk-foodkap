@@ -36,6 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://dkcxdjppq43gj" path="res://assets/uiAndBg/octagon.png" id="34_4k2k6"]
 [ext_resource type="Texture2D" uid="uid://buligik6dj73g" path="res://assets/ingredients/kaplin.png" id="35_0rl1p"]
 [ext_resource type="Texture2D" uid="uid://0xu46j311sbf" path="res://assets/machines/stove.png" id="36_ok6jj"]
+[ext_resource type="AudioStream" uid="uid://cmkrurkaujyvv" path="res://sfx/ThatTimeIOperatedASpaceFoodTruck(version1).mp3" id="37_facbu"]
 
 [sub_resource type="Gradient" id="Gradient_1h7o1"]
 colors = PackedColorArray(0.2946382, 3.218744e-07, 8.4228816e-08, 1, 1, 1, 1, 1)
@@ -514,22 +515,45 @@ horizontal_alignment = 1
 [node name="Node2D" type="Node2D" parent="HoldingManager/SubViewport" unique_id=551404161]
 scale = Vector2(2, 2)
 
-[node name="Icon" type="Sprite2D" parent="HoldingManager/SubViewport/Node2D" unique_id=417373091]
-position = Vector2(472.08105, 334.74994)
-scale = Vector2(0.2283184, 0.8918921)
-texture = ExtResource("3_lquwl")
+[node name="Handle" type="Sprite2D" parent="HoldingManager/SubViewport/Node2D" unique_id=1765459148]
+position = Vector2(472.50003, 265.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("6_1u8w0")
 
-[node name="Icon2" type="Sprite2D" parent="HoldingManager/SubViewport/Node2D" unique_id=22368557]
-position = Vector2(435.08112, 280.7499)
-rotation = -1.5707964
-scale = Vector2(0.2283184, 0.8918921)
-texture = ExtResource("3_lquwl")
+[node name="Handle2" type="Sprite2D" parent="HoldingManager/SubViewport/Node2D" unique_id=1159262197]
+position = Vector2(473, 276.50003)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("6_1u8w0")
 
-[node name="Icon3" type="Sprite2D" parent="HoldingManager/SubViewport/Node2D" unique_id=1449858173]
-position = Vector2(511.08112, 280.7499)
-rotation = -1.5707964
-scale = Vector2(0.2283184, 0.8918921)
-texture = ExtResource("3_lquwl")
+[node name="Handle3" type="Sprite2D" parent="HoldingManager/SubViewport/Node2D" unique_id=1750093685]
+position = Vector2(472.99997, 288)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("6_1u8w0")
+
+[node name="Handle4" type="Sprite2D" parent="HoldingManager/SubViewport/Node2D" unique_id=445360935]
+position = Vector2(472.5, 298.00003)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("6_1u8w0")
+
+[node name="Handle5" type="Sprite2D" parent="HoldingManager/SubViewport/Node2D" unique_id=1597409071]
+position = Vector2(472, 309.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("6_1u8w0")
+
+[node name="Handle6" type="Sprite2D" parent="HoldingManager/SubViewport/Node2D" unique_id=1990273453]
+position = Vector2(471.5, 320.00003)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("6_1u8w0")
+
+[node name="Handle7" type="Sprite2D" parent="HoldingManager/SubViewport/Node2D" unique_id=1200242819]
+position = Vector2(472, 328.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("6_1u8w0")
+
+[node name="Handle8" type="Sprite2D" parent="HoldingManager/SubViewport/Node2D" unique_id=1481848528]
+position = Vector2(472, 328.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("6_1u8w0")
 
 [node name="Plate" type="Sprite2D" parent="HoldingManager/SubViewport/Node2D" unique_id=1557747950]
 position = Vector2(473.0813, 253.75003)
@@ -1416,8 +1440,14 @@ offset_right = 665.0
 offset_bottom = 568.0
 text = "Main Menu"
 
+[node name="ThatTimeIOperatedASpaceFoodTruck(version1)" type="AudioStreamPlayer" parent="." unique_id=531793147]
+stream = ExtResource("37_facbu")
+volume_db = -16.724
+autoplay = true
+
 [connection signal="clickedObject" from="SelectionManager" to="HoldingManager" method="_on_selection_manager_clicked_object"]
 [connection signal="clickedObject" from="SelectionManager" to="SelectionManager" method="_on_clicked_object"]
 [connection signal="pressed" from="SelectorUIManager/CanvasLayer/Panel/Button" to="SelectorUIManager" method="_on_select_button_pressed"]
 [connection signal="pressed" from="TimerStuff/CanvasLayer/Button" to="TimerStuff" method="skip"]
 [connection signal="pressed" from="DayEndManager/CanvasLayer/Control/DayReport/Button" to="DayEndManager" method="on_Report_button_clicked"]
+[connection signal="pressed" from="DayEndManager/CanvasLayer/Control/Loss/Button" to="DayEndManager" method="mainMenu"]

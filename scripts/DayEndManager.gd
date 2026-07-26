@@ -218,4 +218,4 @@ func updatePrices():
 
 
 func mainMenu():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://mainMenu.tscn")

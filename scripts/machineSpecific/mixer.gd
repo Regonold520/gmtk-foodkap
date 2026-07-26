@@ -29,7 +29,7 @@ func run(_delta = 0) -> void:
 				var ingredients = mData["recipesResultKey"][res]
 				var matching = true
 				for slot in slots:
-					slot.get_child(1).visible = false
+					slot.get_child(1).visible = true
 					if not (slot.item.Type in ingredients):
 						matching = false
 				if matching:
@@ -45,6 +45,8 @@ func run(_delta = 0) -> void:
 				slot.item = null
 			slots[0].item = newItem
 			
+	else:
+		$ProgressBar.value = 0
 
 func _process(delta):
 	super(delta)

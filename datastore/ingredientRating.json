@@ -1,12 +1,12 @@
 {
 	"bread": {
 		"flavorText":"An earth classic!",
-		"rating":3,
+		"rating":3.5,
 		"size":2
 	},
 	"breadslice": {
 		"flavorText":"Nothing getes better than this!",
-		"rating":3.5,
+		"rating":4.0,
 		"size":0
 	},
 	"burntScraps":{
@@ -93,6 +93,29 @@
 		"flavorText":"A little bit of this, and a little bit of that.",
 		"rating":2.75,
 		"size":1,
-	}
+	},
 	
+	
+	"omelette":{
+		"flavorText":"There was an egg here. It is now an omelette.",
+		"rating":3,
+		"size":1,
+	},
+	"sweetRoll":{
+		"flavorText":"Its called a sweet roll instead of sweet bread because sweetbread means something else apparently",
+		"rating":4,
+		"size":2
+	},
+	"milk":{
+		"flavorText":"It looks, smells, tastes, and feels like milk. Except it probably doesn't come from an earth cow.",
+		"rating":2,
+		"baseIngredient":true,
+		"size":0
+	},
+	"cream":{
+		"flavorText":"Very good building material",
+		"rating":3,
+		"size":0,
+		"tags":["Sugary"]
+	}
 }

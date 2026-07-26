@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cbuptnfbij8i0" path="res://assets/machines/cuttingboard.png" id="6_pmvd0"]
 [ext_resource type="Script" uid="uid://dhinuyab5vpm" path="res://scripts/machineSlot.gd" id="7_ysub7"]
 [ext_resource type="Script" uid="uid://cs0sbb3q5o2qs" path="res://scripts/textureOffset.gd" id="8_qs6ss"]
-[ext_resource type="Texture2D" uid="uid://cg77hijyxxnqb" path="res://icon.svg" id="9_6cy38"]
+[ext_resource type="Texture2D" uid="uid://bciugcximuiyt" path="res://assets/uiAndBg/pixelCircle.png" id="10_g7tue"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mltvj"]
 atlas = ExtResource("5_bvjmq")
@@ -355,16 +355,20 @@ shape = SubResource("RectangleShape2D_nnkmn")
 offset = Vector2(0, -5)
 script = ExtResource("8_qs6ss")
 
-[node name="ProgressBar" type="TextureProgressBar" parent="Slots/1" unique_id=1902962755]
-offset_left = -7.1999993
-offset_top = 11.199999
-offset_right = 120.8
-offset_bottom = 139.2
+[node name="ProgressBar" type="TextureProgressBar" parent="Slots/1" unique_id=1019530360]
+offset_left = -7.200001
+offset_top = 12.800001
+offset_right = 26.8
+offset_bottom = 46.800003
 scale = Vector2(0.114910156, 0.114910156)
+offset_transform_enabled = true
+offset_transform_position = Vector2(43.51, 11.625)
+offset_transform_scale = Vector2(2.67, 2.67)
 max_value = 1.0
 step = 0.01
 fill_mode = 4
-texture_progress = ExtResource("9_6cy38")
+texture_progress = ExtResource("10_g7tue")
+tint_progress = Color(5.1499906e-06, 0.64625335, 0.35639954, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1430680602]
 deterministic = true

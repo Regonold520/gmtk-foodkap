@@ -8,7 +8,8 @@
 			"dough":"bread",
 			"sugar":"caramel",
 			"pastaDough":"pasta",
-			"indigoSeeds":"indigoSpice"
+			"indigoSeeds":"indigoSpice",
+			"egg":"omelette"
 		}
 	},
 	"blender":{
@@ -34,7 +35,9 @@
 		"fallbackType":"mix",
 		"width":1,
 		"recipesResultKey":{
-			"indigoPasta":["indigoSpice","pasta"]
+			"indigoPasta":["indigoSpice","pasta"],
+			"sweetRoll":["caramel","bread"],
+			"cream":["sugar","milk"]
 		}
 	}
 }

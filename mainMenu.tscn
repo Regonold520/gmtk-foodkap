@@ -4,6 +4,19 @@
 [ext_resource type="Script" uid="uid://dd24q838k33ex" path="res://scripts/main_menu.gd" id="1_wc2lj"]
 [ext_resource type="Texture2D" uid="uid://hchkycej2grt" path="res://assets/uiAndBg/test9Slice.png" id="2_wc2lj"]
 [ext_resource type="Texture2D" uid="uid://c4xwblcfi5spq" path="res://assets/uiAndBg/logo.png" id="3_wked4"]
+[ext_resource type="Texture2D" uid="uid://bg1fnmgeibnmr" path="res://assets/tutorial.PNG" id="5_wked4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wc2lj"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.36078432, 0.5882353, 0.36862746, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
 
 [node name="Node2D" type="Node2D" unique_id=2124851294]
 script = ExtResource("1_wc2lj")
@@ -79,4 +92,78 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
 
+[node name="Panel" type="Panel" parent="." unique_id=309741704]
+visible = false
+offset_left = 439.0
+offset_top = 32.0
+offset_right = 1010.0
+offset_bottom = 613.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wc2lj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel" unique_id=1740018532]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/normal_font_size = 21
+text = "RECIPES (since budget cuts killed the tutorial star)
+Stove -------------------------
+Dough > Bread
+Sugar > Caramel
+Pasta Dough > Pasta
+Indigo Seeds > Indigo Spice
+Egg > Omelette
+Blender--------------------
+Grain > Flour
+Flour > Dough
+Cutting Board -------------------
+Bread > Bread Slice
+Dough > Pasta Dough
+Mixer ---------------------
+Indigo Spice + Pasta > Indigo Pasta
+Caramel + Bread > Sweet Roll
+Sugar + Milk > Cream
+Anything + Anything > Mix"
+
+[node name="Panel2" type="Panel" parent="." unique_id=994081841]
+visible = false
+offset_left = 439.0
+offset_top = 32.0
+offset_right = 1010.0
+offset_bottom = 613.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wc2lj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel2" unique_id=376473415]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/normal_font_size = 21
+text = "the game is simple:
+At the start of the loop, You choose your destination planet.
+
+
+
+
+
+
+After choosing your planet, you will need to make X amount of meals. Try to aim for meals with the correct size! After each voyage, difficulty increases, and you get a bonus machine, alongside a chance to restock.
+
+For making meals, just try clicking boxes with items, and the large hole on the meal dropoff machine. Just click anything that looks clickable!"
+
+[node name="Tutorial" type="Sprite2D" parent="Panel2" unique_id=1295626811]
+position = Vector2(383.7927, 157.49385)
+scale = Vector2(0.3112454, 0.31124544)
+texture = ExtResource("5_wked4")
+
 [connection signal="pressed" from="NinePatchRect/VBoxContainer/PLAY" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/Recipes" to="." method="_on_recipes_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/Guide" to="." method="_on_guide_pressed"]

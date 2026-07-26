@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://dhinuyab5vpm" path="res://scripts/machineSlot.gd" id="2_ieqif"]
 [ext_resource type="PackedScene" uid="uid://blk14fdp1rcc6" path="res://scenes/ingredientBox.tscn" id="3_73n6u"]
 [ext_resource type="Script" uid="uid://cs0sbb3q5o2qs" path="res://scripts/textureOffset.gd" id="4_ex2bf"]
-[ext_resource type="Texture2D" uid="uid://cg77hijyxxnqb" path="res://icon.svg" id="5_4tnxd"]
+[ext_resource type="Texture2D" uid="uid://bciugcximuiyt" path="res://assets/uiAndBg/pixelCircle.png" id="7_a00b4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nnkmn"]
 size = Vector2(20, 12)
@@ -67,16 +67,20 @@ color_ramp = SubResource("Gradient_mltvj")
 offset = Vector2(0, -5)
 script = ExtResource("4_ex2bf")
 
-[node name="ProgressBar" type="TextureProgressBar" parent="Slots/1" unique_id=1902962755]
-offset_left = -7.6000004
-offset_top = 6.799999
-offset_right = 7.2
-offset_bottom = 19.6
+[node name="ProgressBar" type="TextureProgressBar" parent="Slots/1" unique_id=643522702]
+offset_left = 1.6000013
+offset_top = 20.0
+offset_right = 129.6
+offset_bottom = 148.0
 scale = Vector2(0.114910156, 0.114910156)
+offset_transform_enabled = true
+offset_transform_position = Vector2(43.51, 11.625)
+offset_transform_scale = Vector2(2.67, 2.67)
 max_value = 1.0
 step = 0.01
 fill_mode = 4
-texture_progress = ExtResource("5_4tnxd")
+texture_progress = ExtResource("7_a00b4")
+tint_progress = Color(5.1499906e-06, 0.64625335, 0.35639954, 1)
 
 [node name="2" type="Area2D" parent="Slots" unique_id=1000751159]
 position = Vector2(13.999998, -8)
@@ -107,13 +111,17 @@ scale = Vector2(0.99999994, 0.99999994)
 offset = Vector2(0, -5)
 script = ExtResource("4_ex2bf")
 
-[node name="ProgressBar" type="TextureProgressBar" parent="Slots/2" unique_id=172167205]
-offset_left = -7.1999955
-offset_top = 6.7999983
-offset_right = 120.8
-offset_bottom = 134.8
+[node name="ProgressBar" type="TextureProgressBar" parent="Slots/2" unique_id=1623494677]
+offset_left = 2.0000033
+offset_top = 20.400002
+offset_right = 130.0
+offset_bottom = 148.4
 scale = Vector2(0.114910156, 0.114910156)
+offset_transform_enabled = true
+offset_transform_position = Vector2(43.51, 11.625)
+offset_transform_scale = Vector2(2.67, 2.67)
 max_value = 1.0
 step = 0.01
 fill_mode = 4
-texture_progress = ExtResource("5_4tnxd")
+texture_progress = ExtResource("7_a00b4")
+tint_progress = Color(5.1499906e-06, 0.64625335, 0.35639954, 1)

@@ -6,10 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://b6ju3xp0u5fm8" path="res://assets/machines/countertop.png" id="4_53l8s"]
 [ext_resource type="Texture2D" uid="uid://dbyx61rm2u0ln" path="res://assets/machines/mixer.png" id="5_6dcph"]
 [ext_resource type="Script" uid="uid://cu2b7000l0gfw" path="res://scripts/machineStarter.gd" id="6_seuhx"]
+[ext_resource type="Texture2D" uid="uid://bciugcximuiyt" path="res://assets/uiAndBg/pixelCircle.png" id="7_6dcph"]
 [ext_resource type="Script" uid="uid://dhinuyab5vpm" path="res://scripts/machineSlot.gd" id="7_kpy46"]
 [ext_resource type="Script" uid="uid://cs0sbb3q5o2qs" path="res://scripts/textureOffset.gd" id="8_to63m"]
 [ext_resource type="Texture2D" uid="uid://cr3jykc53ouv3" path="res://assets/ingredients/caramel.png" id="9_53l8s"]
-[ext_resource type="Texture2D" uid="uid://cg77hijyxxnqb" path="res://icon.svg" id="9_nrhxh"]
 
 [sub_resource type="Gradient" id="Gradient_mlghm"]
 offsets = PackedFloat32Array(0, 0.21794872, 1)
@@ -67,16 +67,20 @@ script = ExtResource("6_seuhx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1442546456]
 shape = SubResource("CircleShape2D_mltvj")
 
-[node name="ProgressBar" type="TextureProgressBar" parent="." unique_id=1902962755]
-offset_left = -7.599998
-offset_top = 1.5999999
-offset_right = 120.4
-offset_bottom = 129.6
+[node name="ProgressBar" type="TextureProgressBar" parent="." unique_id=1317221160]
+offset_left = 1.6000009
+offset_top = 15.200003
+offset_right = 129.6
+offset_bottom = 143.2
 scale = Vector2(0.114910156, 0.114910156)
+offset_transform_enabled = true
+offset_transform_position = Vector2(43.51, 11.625)
+offset_transform_scale = Vector2(2.67, 2.67)
 max_value = 1.0
 step = 0.01
 fill_mode = 4
-texture_progress = ExtResource("9_nrhxh")
+texture_progress = ExtResource("7_6dcph")
+tint_progress = Color(5.1499906e-06, 0.64625335, 0.35639954, 1)
 
 [node name="Slots" type="Node2D" parent="." unique_id=807926907]
 
