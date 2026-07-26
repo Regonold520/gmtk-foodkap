@@ -22,7 +22,8 @@ func updateInfoPanel():
 	infoPanel.text += "Destination: " + Ref.currentDestination.PlanetName
 	infoPanel.text += "\n"
 	infoPanel.text += "Desired Meal Size: " + Ref.currentDestination.MealSizes.find_key(Ref.currentDestination.DesiredMealSize) + "\n"
-	infoPanel.text += "Favored Foods: "
+	var capitalized_array = Ref.currentDestination.FavoredMeals.map(func(s: String): return s.capitalize())
+	infoPanel.text +=  "Favored Meals: " + ", ".join(capitalized_array) + "\n"
 
 func updateAll():
 	updateInfoPanel()

@@ -48,3 +48,8 @@ func _process(delta):
 	var timePercentRemaining = 1-inverse_lerp(timer.wait_time,0,timer.time_left)
 	progress.get_child(0).offset_transform_scale = Vector2.ONE.max(inverse_lerp(timer.wait_time,0,timer.time_left) * Vector2.ONE * 5)
 	
+
+
+func skip():
+	timer.stop()
+	timer.start(0.01)

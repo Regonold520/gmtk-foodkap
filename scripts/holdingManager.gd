@@ -42,8 +42,9 @@ func _on_selection_manager_clicked_object(object : Node):
 	
 	if object is MealDropoff:
 		if MealManag.meals.size() < Ref.currentDestination.MealCount:
-			MealManag.addMeal(inHand)
-			inHand = null
+			if inHand:
+				MealManag.addMeal(inHand)
+				inHand = null
 	
 func _process(delta):
 	if inHand:

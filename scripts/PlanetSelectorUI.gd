@@ -12,6 +12,7 @@ var circleNodes : Array[Node2D]= []
 var NodeToData = {}
 
 var buttonGroup = ButtonGroup
+var difficulty = 0.3
 
 var currentPlanetClicked
 var currentPlanetDataHovered : PlanetData
@@ -25,12 +26,14 @@ func startSelection():
 	Camera.active = false
 	planetDataDisplay.global_position = Vector2.ONE * 2000
 	currentPlanetClicked = null
+	generatePlanets(5,difficulty)
+	difficulty += 0.1
+	$CanvasLayer/Panel/Button.disabled = false
 
 
 func _ready():
 	get_child(0).visible = true
 	startSelection()
-	generatePlanets(5,0.3)
 
 func _process(delta):
 	if display: 
@@ -62,8 +65,10 @@ func get_valid_position(min_x, max_x, min_y, max_y) -> Vector2:
 	)
 
 func generatePlanets(amount = 5,difficulty = 1):
-	for I in circleNodes: I.queue_free()
-	
+	for I in circleNodes:
+		if is_instance_valid(I):
+			I.queue_free()
+	circleNodes = []
 	# Ensure there is always a close by planet
 	var newPlanet = planetScene.instantiate()
 	theBigOne.add_child(newPlanet)

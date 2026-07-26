@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b6ju3xp0u5fm8" path="res://assets/machines/countertop.png" id="4_pmvd0"]
 [ext_resource type="Texture2D" uid="uid://miw6rpacjnwm" path="res://assets/machines/cuttingBoardPieces.png" id="5_bvjmq"]
 [ext_resource type="Script" uid="uid://cu2b7000l0gfw" path="res://scripts/machineStarter.gd" id="6_og3oe"]
-[ext_resource type="Texture2D" uid="uid://cbuptnfbij8i0" path="res://assets/machines/cuttingBoard.png" id="6_pmvd0"]
+[ext_resource type="Texture2D" uid="uid://cbuptnfbij8i0" path="res://assets/machines/cuttingboard.png" id="6_pmvd0"]
 [ext_resource type="Script" uid="uid://dhinuyab5vpm" path="res://scripts/machineSlot.gd" id="7_ysub7"]
 [ext_resource type="Script" uid="uid://cs0sbb3q5o2qs" path="res://scripts/textureOffset.gd" id="8_qs6ss"]
 [ext_resource type="Texture2D" uid="uid://cg77hijyxxnqb" path="res://icon.svg" id="9_6cy38"]
@@ -18,6 +18,10 @@ region = Rect2(1, 1, 11, 5)
 [sub_resource type="AtlasTexture" id="AtlasTexture_li224"]
 atlas = ExtResource("5_bvjmq")
 region = Rect2(15, 1, 6, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7tue"]
+atlas = ExtResource("5_bvjmq")
+region = Rect2(14.97484, 0.9676504, 6, 6)
 
 [sub_resource type="Gradient" id="Gradient_mlghm"]
 offsets = PackedFloat32Array(0, 0.21794872, 1)
@@ -302,6 +306,12 @@ z_index = 1
 position = Vector2(1.6275878, -2.6666389)
 rotation = -3.9429617
 texture = SubResource("AtlasTexture_li224")
+
+[node name="CuttingBoardPieces2" type="Sprite2D" parent="CuttingBoardPieces/CuttingBoardPieces2" unique_id=51258815]
+z_index = 1
+position = Vector2(-3.3792684, 0.65988576)
+rotation = 4.0194077
+texture = SubResource("AtlasTexture_g7tue")
 
 [node name="CuttingBoard" type="Sprite2D" parent="." unique_id=841978976]
 position = Vector2(0.8, -18)

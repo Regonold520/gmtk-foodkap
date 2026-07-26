@@ -411,21 +411,10 @@ theme_override_font_sizes/font_size = 37
 text = "Egg"
 horizontal_alignment = 1
 
-[node name="Flavor" type="Label" parent="HoldingManager/SubViewport/HBoxContainer/VBoxContainer/Top/PanelContainer/VBoxContainer" unique_id=862133226]
-custom_minimum_size = Vector2(167, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 15
-text = "Its sliced to the point of unrecognizability, turning into a fine dust. Throw this out the window!"
-autowrap_mode = 2
-
 [node name="HSeparator" type="HSeparator" parent="HoldingManager/SubViewport/HBoxContainer/VBoxContainer/Top/PanelContainer/VBoxContainer" unique_id=1941365417]
 layout_mode = 2
 
-[node name="PortionSize" type="Label" parent="HoldingManager/SubViewport/HBoxContainer/VBoxContainer/Top/PanelContainer/VBoxContainer" unique_id=1132436029]
-layout_mode = 2
-text = "Portion Size:"
-
-[node name="Rating" type="Label" parent="HoldingManager/SubViewport/HBoxContainer/VBoxContainer/Top/PanelContainer/VBoxContainer" unique_id=1120967723]
+[node name="Label" type="Label" parent="HoldingManager/SubViewport/HBoxContainer/VBoxContainer/Top/PanelContainer/VBoxContainer" unique_id=1132436029]
 layout_mode = 2
 text = "Portion Size:"
 
@@ -473,21 +462,10 @@ theme_override_font_sizes/font_size = 37
 text = "Egg"
 horizontal_alignment = 1
 
-[node name="Flavor" type="Label" parent="HoldingManager/SubViewport/HBoxContainer/VBoxContainer/Bottom/PanelContainer/VBoxContainer" unique_id=1687962169]
-custom_minimum_size = Vector2(167, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 15
-text = "Its sliced to the point of unrecognizability, turning into a fine dust. Throw this out the window!"
-autowrap_mode = 2
-
 [node name="HSeparator" type="HSeparator" parent="HoldingManager/SubViewport/HBoxContainer/VBoxContainer/Bottom/PanelContainer/VBoxContainer" unique_id=713853184]
 layout_mode = 2
 
-[node name="PortionSize" type="Label" parent="HoldingManager/SubViewport/HBoxContainer/VBoxContainer/Bottom/PanelContainer/VBoxContainer" unique_id=2034090840]
-layout_mode = 2
-text = "Portion Size:"
-
-[node name="Rating" type="Label" parent="HoldingManager/SubViewport/HBoxContainer/VBoxContainer/Bottom/PanelContainer/VBoxContainer" unique_id=1984898904]
+[node name="Label" type="Label" parent="HoldingManager/SubViewport/HBoxContainer/VBoxContainer/Bottom/PanelContainer/VBoxContainer" unique_id=2034090840]
 layout_mode = 2
 text = "Portion Size:"
 
@@ -874,13 +852,6 @@ text = "50S"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="TimerStuff/CanvasLayer" unique_id=1484227899]
-offset_left = 741.0
-offset_top = 7.0
-offset_right = 783.0
-offset_bottom = 38.0
-text = "SKIP"
-
 [node name="FreesoundCommunityGong92707" type="AudioStreamPlayer" parent="TimerStuff" unique_id=1308499579]
 stream = ExtResource("33_jq2sk")
 
@@ -1223,7 +1194,6 @@ vertical_icon_alignment = 0
 expand_icon = true
 
 [node name="ChooseIngredients" type="Control" parent="DayEndManager/CanvasLayer/Control" unique_id=99599388]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -1357,44 +1327,7 @@ offset_bottom = 610.0
 theme_override_font_sizes/font_size = 22
 text = "Confirm And Continue"
 
-[node name="Loss" type="Control" parent="DayEndManager/CanvasLayer/Control" unique_id=760026517]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="DayEndManager/CanvasLayer/Control/Loss" unique_id=1098377260]
-layout_mode = 0
-offset_left = 350.0
-offset_top = 63.999996
-offset_right = 791.0
-offset_bottom = 262.0
-scale = Vector2(1.0108109, 1.6056339)
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_constants/outline_size = 40
-theme_override_font_sizes/font_size = 145
-text = "FIRED."
-
-[node name="Label2" type="Label" parent="DayEndManager/CanvasLayer/Control/Loss" unique_id=1268414433]
-layout_mode = 0
-offset_left = 395.00003
-offset_top = 356.0
-offset_right = 721.0
-offset_bottom = 384.0
-rotation = 0.04487923
-theme_override_constants/outline_size = 23
-theme_override_font_sizes/font_size = 20
-text = "Your rating got too low! Try again!"
-
-[node name="Button" type="Button" parent="DayEndManager/CanvasLayer/Control/Loss" unique_id=1028442500]
-layout_mode = 0
-offset_left = 479.0
-offset_top = 484.0
-offset_right = 665.0
-offset_bottom = 568.0
-text = "Main Menu"
-
 [connection signal="clickedObject" from="SelectionManager" to="HoldingManager" method="_on_selection_manager_clicked_object"]
 [connection signal="clickedObject" from="SelectionManager" to="SelectionManager" method="_on_clicked_object"]
 [connection signal="pressed" from="SelectorUIManager/CanvasLayer/Panel/Button" to="SelectorUIManager" method="_on_select_button_pressed"]
-[connection signal="pressed" from="TimerStuff/CanvasLayer/Button" to="TimerStuff" method="skip"]
 [connection signal="pressed" from="DayEndManager/CanvasLayer/Control/DayReport/Button" to="DayEndManager" method="on_Report_button_clicked"]
