@@ -215,3 +215,7 @@ func updatePrices():
 		$CanvasLayer/Control/ChooseIngredients/Button.disabled = true
 	else:
 		$CanvasLayer/Control/ChooseIngredients/Button.disabled = false
+
+
+func mainMenu():
+	pass # Replace with function body.

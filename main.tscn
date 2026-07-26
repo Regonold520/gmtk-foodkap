@@ -81,29 +81,29 @@ corner_detail = 5
 [sub_resource type="CircleShape2D" id="CircleShape2D_mltvj"]
 radius = 2.0
 
-[sub_resource type="Gradient" id="Gradient_82xsv"]
+[sub_resource type="Gradient" id="Gradient_ok6jj"]
 offsets = PackedFloat32Array(0, 0.7125, 1)
 colors = PackedColorArray(0, 0, 0, 0, 0.54410607, 0.6577031, 0.9, 0.9, 0.6045623, 0.73078126, 1, 1)
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_1h7o1"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_facbu"]
 frequency = 0.023
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_getpj"]
-noise = SubResource("FastNoiseLite_1h7o1")
-color_ramp = SubResource("Gradient_82xsv")
+noise = SubResource("FastNoiseLite_facbu")
+color_ramp = SubResource("Gradient_ok6jj")
 seamless = true
 
-[sub_resource type="Gradient" id="Gradient_0k5ay"]
+[sub_resource type="Gradient" id="Gradient_b1qrp"]
 offsets = PackedFloat32Array(0.375, 0.75625, 1)
 colors = PackedColorArray(0, 0, 0, 0, 0.81000006, 0.48266193, 0.554062, 0.81000006, 1, 0.5958789, 0.68402714, 1)
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_4s4i2"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_come4"]
 seed = 6
 frequency = 0.023
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ryguw"]
-noise = SubResource("FastNoiseLite_4s4i2")
-color_ramp = SubResource("Gradient_0k5ay")
+noise = SubResource("FastNoiseLite_come4")
+color_ramp = SubResource("Gradient_b1qrp")
 seamless = true
 
 [sub_resource type="Curve" id="Curve_3n3aq"]
@@ -197,6 +197,18 @@ content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
 bg_color = Color(1, 1, 1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1qrp"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.36078432, 0.58431375, 0.37254903, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
@@ -1358,9 +1370,20 @@ theme_override_font_sizes/font_size = 22
 text = "Confirm And Continue"
 
 [node name="Loss" type="Control" parent="DayEndManager/CanvasLayer/Control" unique_id=760026517]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="DayEndManager/CanvasLayer/Control/Loss" unique_id=1023472085]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.5
+offset_left = 322.0
+offset_top = 89.0
+offset_right = 812.0
+offset_bottom = 587.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_b1qrp")
 
 [node name="Label" type="Label" parent="DayEndManager/CanvasLayer/Control/Loss" unique_id=1098377260]
 layout_mode = 0

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GMTKFoodkap"
-run/main_scene="uid://b605k8vk4eklb"
+run/main_scene="uid://dpv5n2fxoa1bg"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

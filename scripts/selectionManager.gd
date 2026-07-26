@@ -13,6 +13,10 @@ var hoveringObject : Node
 
 var running = true
 
+func _ready():
+	print("hi im selection manager im setting myself")
+	Ref.selectionManager = self
+
 func _process(delta):
 	if !running: return
 	selectionObject.global_position = selectionObject.get_global_mouse_position()

@@ -4,6 +4,7 @@ class_name Trash
 @export var trashParticle : CPUParticles2D
 
 func _ready() -> void:
+	await get_tree().create_timer(1.0).timeout
 	Ref.selectionManager.clickedObject.connect(areaClicked)
 	
 func areaClicked(area : Area2D) -> void:

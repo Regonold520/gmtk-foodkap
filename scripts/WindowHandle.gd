@@ -6,6 +6,7 @@ var windowOpen = false
 @export var trashClickzone : Area2D
 
 func _ready() -> void:
+	await get_tree().create_timer(0.05).timeout
 	Ref.selectionManager.clickedObject.connect(areaClicked)
 	
 func areaClicked(area : Area2D) -> void:

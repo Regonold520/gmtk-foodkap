@@ -46,6 +46,9 @@ func _on_selection_manager_clicked_object(object : Node):
 				MealManag.addMeal(inHand)
 				inHand = null
 	
+func _ready():
+	Ref.holdingManager = self
+				
 func _process(delta):
 	if inHand:
 		ItemDataDisplay.display(inHand)
