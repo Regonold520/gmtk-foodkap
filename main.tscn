@@ -35,6 +35,7 @@
 [ext_resource type="AudioStream" uid="uid://ckrpbnt0gejum" path="res://sfx/freesound_community-gong-92707.mp3" id="33_jq2sk"]
 [ext_resource type="Texture2D" uid="uid://dkcxdjppq43gj" path="res://assets/uiAndBg/octagon.png" id="34_4k2k6"]
 [ext_resource type="Texture2D" uid="uid://buligik6dj73g" path="res://assets/ingredients/kaplin.png" id="35_0rl1p"]
+[ext_resource type="Texture2D" uid="uid://0xu46j311sbf" path="res://assets/machines/stove.png" id="36_ok6jj"]
 
 [sub_resource type="Gradient" id="Gradient_1h7o1"]
 colors = PackedColorArray(0.2946382, 3.218744e-07, 8.4228816e-08, 1, 1, 1, 1, 1)
@@ -85,12 +86,6 @@ script = ExtResource("5_lquwl")
 Type = "egg"
 metadata/_custom_type_script = "uid://de02chtosiqg4"
 
-[sub_resource type="Resource" id="Resource_0rl1p"]
-resource_local_to_scene = true
-script = ExtResource("5_lquwl")
-Type = "grain"
-metadata/_custom_type_script = "uid://de02chtosiqg4"
-
 [sub_resource type="Resource" id="Resource_ok6jj"]
 resource_local_to_scene = true
 script = ExtResource("5_lquwl")
@@ -139,6 +134,12 @@ script = ExtResource("5_lquwl")
 Type = "grain"
 metadata/_custom_type_script = "uid://de02chtosiqg4"
 
+[sub_resource type="Resource" id="Resource_gngh3"]
+resource_local_to_scene = true
+script = ExtResource("5_lquwl")
+Type = "grain"
+metadata/_custom_type_script = "uid://de02chtosiqg4"
+
 [sub_resource type="Resource" id="Resource_6dcph"]
 script = ExtResource("5_lquwl")
 Type = "indigoSeeds"
@@ -149,12 +150,6 @@ script = ExtResource("5_lquwl")
 Type = "indigoSeeds"
 metadata/_custom_type_script = "uid://de02chtosiqg4"
 
-[sub_resource type="Resource" id="Resource_gngh3"]
-resource_local_to_scene = true
-script = ExtResource("5_lquwl")
-Type = "grain"
-metadata/_custom_type_script = "uid://de02chtosiqg4"
-
 [sub_resource type="Resource" id="Resource_0n3wm"]
 resource_local_to_scene = true
 script = ExtResource("5_lquwl")
@@ -162,6 +157,12 @@ Type = "grain"
 metadata/_custom_type_script = "uid://de02chtosiqg4"
 
 [sub_resource type="Resource" id="Resource_qnost"]
+resource_local_to_scene = true
+script = ExtResource("5_lquwl")
+Type = "grain"
+metadata/_custom_type_script = "uid://de02chtosiqg4"
+
+[sub_resource type="Resource" id="Resource_wnkbs"]
 resource_local_to_scene = true
 script = ExtResource("5_lquwl")
 Type = "grain"
@@ -260,6 +261,34 @@ corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_facbu"]
+content_margin_left = 4.0
+content_margin_top = 34.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 0.94417167, 0.8613182, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+corner_detail = 5
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ok6jj"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(1, 1, 1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
 
 [node name="Node2D" type="Node2D" unique_id=1273140]
 
@@ -600,7 +629,7 @@ ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_hgxv0")])
 position = Vector2(17.599998, 1.2000077)
 scale = Vector2(0.39999995, 0.39999995)
 canRecieveNewItemsIfEmpty = false
-ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_0rl1p"), SubResource("Resource_ok6jj"), SubResource("Resource_facbu")])
+ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_ok6jj"), SubResource("Resource_facbu"), SubResource("Resource_b1qrp")])
 
 [node name="DeepFreezer4" type="Sprite2D" parent="." unique_id=771303666]
 position = Vector2(543, 201.99998)
@@ -616,7 +645,7 @@ canRecieveNewItemsIfEmpty = false
 position = Vector2(17.599998, 1.2000077)
 scale = Vector2(0.39999995, 0.39999995)
 canRecieveNewItemsIfEmpty = false
-ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_b1qrp"), SubResource("Resource_come4"), SubResource("Resource_h8e4i")])
+ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_come4"), SubResource("Resource_h8e4i"), SubResource("Resource_4lmeg")])
 
 [node name="DeepFreezer3" type="Sprite2D" parent="." unique_id=905716188]
 position = Vector2(543, 160)
@@ -632,7 +661,7 @@ canRecieveNewItemsIfEmpty = false
 position = Vector2(17.599998, 1.2000077)
 scale = Vector2(0.39999995, 0.39999995)
 canRecieveNewItemsIfEmpty = false
-ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_4lmeg"), SubResource("Resource_0cp0l"), SubResource("Resource_d2t1y")])
+ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_0cp0l"), SubResource("Resource_d2t1y"), SubResource("Resource_gngh3")])
 
 [node name="DeepFreezer2" type="Sprite2D" parent="." unique_id=824760828]
 position = Vector2(543, 118)
@@ -649,7 +678,7 @@ ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_6dcph"), Su
 position = Vector2(17.599998, 1.2000077)
 scale = Vector2(0.39999995, 0.39999995)
 canRecieveNewItemsIfEmpty = false
-ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_gngh3"), SubResource("Resource_0n3wm"), SubResource("Resource_qnost")])
+ResourcesHeld = Array[ExtResource("5_lquwl")]([SubResource("Resource_0n3wm"), SubResource("Resource_qnost"), SubResource("Resource_wnkbs")])
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=325803655 node_paths=PackedStringArray("BG")]
 position = Vector2(730, 162)
@@ -917,12 +946,13 @@ vertical_alignment = 1
 [node name="FreesoundCommunityGong92707" type="AudioStreamPlayer" parent="TimerStuff" unique_id=1308499579]
 stream = ExtResource("33_jq2sk")
 
-[node name="DayEndManager" type="Node" parent="." unique_id=100021437 node_paths=PackedStringArray("mealManager", "percentageDisplay", "financeDisplay", "ReviewLabels")]
+[node name="DayEndManager" type="Node" parent="." unique_id=100021437 node_paths=PackedStringArray("mealManager", "percentageDisplay", "financeDisplay", "ReviewLabels", "machineChoices")]
 script = ExtResource("30_kq58d")
 mealManager = NodePath("../MealManager")
-percentageDisplay = NodePath("CanvasLayer/Control/Percentage")
-financeDisplay = NodePath("CanvasLayer/Control/Panel/Money")
-ReviewLabels = [NodePath("CanvasLayer/Control/Review1"), NodePath("CanvasLayer/Control/Review2"), NodePath("CanvasLayer/Control/Review3"), NodePath("CanvasLayer/Control/Review4")]
+percentageDisplay = NodePath("CanvasLayer/Control/DayReport/Percentage")
+financeDisplay = NodePath("CanvasLayer/Control/DayReport/Panel/Money")
+ReviewLabels = [NodePath("CanvasLayer/Control/DayReport/Review1"), NodePath("CanvasLayer/Control/DayReport/Review2"), NodePath("CanvasLayer/Control/DayReport/Review3"), NodePath("CanvasLayer/Control/DayReport/Review4")]
+machineChoices = [NodePath("CanvasLayer/Control/ChooseDevice/Button"), NodePath("CanvasLayer/Control/ChooseDevice/Button2"), NodePath("CanvasLayer/Control/ChooseDevice/Button3")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="DayEndManager" unique_id=74777889]
 
@@ -986,7 +1016,16 @@ offset_right = 1152.0
 offset_bottom = 648.0
 texture = SubResource("NoiseTexture2D_ryguw")
 
-[node name="Label" type="Label" parent="DayEndManager/CanvasLayer/Control" unique_id=1880014847]
+[node name="DayReport" type="Control" parent="DayEndManager/CanvasLayer/Control" unique_id=1034063254]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="DayEndManager/CanvasLayer/Control/DayReport" unique_id=1880014847]
 layout_mode = 0
 offset_left = 46.0
 offset_top = 27.0
@@ -999,14 +1038,14 @@ text = "DAY REPORT"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel" type="Panel" parent="DayEndManager/CanvasLayer/Control" unique_id=1240354447]
+[node name="Panel" type="Panel" parent="DayEndManager/CanvasLayer/Control/DayReport" unique_id=1240354447]
 layout_mode = 0
 offset_left = 44.0
 offset_top = 111.0
 offset_right = 402.0
 offset_bottom = 446.0
 
-[node name="Money" type="RichTextLabel" parent="DayEndManager/CanvasLayer/Control/Panel" unique_id=1606368716]
+[node name="Money" type="RichTextLabel" parent="DayEndManager/CanvasLayer/Control/DayReport/Panel" unique_id=1606368716]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1023,26 +1062,26 @@ Today: +30$
 [b]TOTAL: 300$"
 fit_content = true
 
-[node name="Octagon" type="Sprite2D" parent="DayEndManager/CanvasLayer/Control" unique_id=1925921603]
+[node name="Octagon" type="Sprite2D" parent="DayEndManager/CanvasLayer/Control/DayReport" unique_id=1925921603]
 modulate = Color(1, 1, 1, 0.1882353)
-position = Vector2(950, 157.00003)
+position = Vector2(950, 157)
 rotation = -0.5013137
 scale = Vector2(3.5394268, 3.5394268)
 texture = ExtResource("34_4k2k6")
 
-[node name="Percentage" type="Label" parent="DayEndManager/CanvasLayer/Control" unique_id=1153769713]
+[node name="Percentage" type="Label" parent="DayEndManager/CanvasLayer/Control/DayReport" unique_id=1153769713]
 layout_mode = 0
 offset_left = 724.03186
-offset_top = 41.7759
+offset_top = 41.77588
 offset_right = 1216.0513
-offset_bottom = 162.77591
+offset_bottom = 162.77588
 rotation = 0.20395009
 theme_override_font_sizes/font_size = 88
 text = "85%"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label3" type="Label" parent="DayEndManager/CanvasLayer/Control" unique_id=1453459520]
+[node name="Label3" type="Label" parent="DayEndManager/CanvasLayer/Control/DayReport" unique_id=1453459520]
 layout_mode = 0
 offset_left = 428.99997
 offset_top = 226.0
@@ -1057,7 +1096,7 @@ theme_override_font_sizes/font_size = 59
 text = "Here are your new reviews!"
 horizontal_alignment = 1
 
-[node name="Review1" type="Label" parent="DayEndManager/CanvasLayer/Control" unique_id=1795680048]
+[node name="Review1" type="Label" parent="DayEndManager/CanvasLayer/Control/DayReport" unique_id=1795680048]
 layout_mode = 0
 offset_left = 453.0
 offset_top = 264.0
@@ -1070,7 +1109,7 @@ theme_override_font_sizes/font_size = 22
 text = "I LOVED THIS FOOD!"
 horizontal_alignment = 1
 
-[node name="Review2" type="Label" parent="DayEndManager/CanvasLayer/Control" unique_id=46101153]
+[node name="Review2" type="Label" parent="DayEndManager/CanvasLayer/Control/DayReport" unique_id=46101153]
 layout_mode = 0
 offset_left = 401.0
 offset_top = 303.0
@@ -1083,7 +1122,7 @@ theme_override_font_sizes/font_size = 22
 text = "I HATE THIS FOOD!"
 horizontal_alignment = 1
 
-[node name="Review3" type="Label" parent="DayEndManager/CanvasLayer/Control" unique_id=1577808842]
+[node name="Review3" type="Label" parent="DayEndManager/CanvasLayer/Control/DayReport" unique_id=1577808842]
 layout_mode = 0
 offset_left = 454.0
 offset_top = 340.0
@@ -1096,7 +1135,7 @@ theme_override_font_sizes/font_size = 22
 text = "I INDIFFER THIS FOOD!"
 horizontal_alignment = 1
 
-[node name="Review4" type="Label" parent="DayEndManager/CanvasLayer/Control" unique_id=553197006]
+[node name="Review4" type="Label" parent="DayEndManager/CanvasLayer/Control/DayReport" unique_id=553197006]
 layout_mode = 0
 offset_left = 410.0
 offset_top = 378.0
@@ -1109,7 +1148,7 @@ theme_override_font_sizes/font_size = 22
 text = "I INDIFFER THIS FOOD!"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="DayEndManager/CanvasLayer/Control" unique_id=1419188917]
+[node name="Button" type="Button" parent="DayEndManager/CanvasLayer/Control/DayReport" unique_id=1419188917]
 layout_mode = 0
 offset_left = 881.0
 offset_top = 549.0
@@ -1118,14 +1157,14 @@ offset_bottom = 620.0
 theme_override_font_sizes/font_size = 45
 text = "CONTINUE"
 
-[node name="Foodtruck" type="Sprite2D" parent="DayEndManager/CanvasLayer/Control" unique_id=1586956130]
+[node name="Foodtruck" type="Sprite2D" parent="DayEndManager/CanvasLayer/Control/DayReport" unique_id=1586956130]
 modulate = Color(0.9647059, 0.9647059, 0.9647059, 0.6039216)
 position = Vector2(774, 563)
 scale = Vector2(5.665, 5.665)
 texture = ExtResource("19_cegan")
 flip_h = true
 
-[node name="TextureRect" type="TextureRect" parent="DayEndManager/CanvasLayer/Control" unique_id=1605402737]
+[node name="TextureRect" type="TextureRect" parent="DayEndManager/CanvasLayer/Control/DayReport" unique_id=1605402737]
 modulate = Color(1, 1, 1, 0.18431373)
 layout_mode = 0
 offset_left = 55.0
@@ -1136,11 +1175,205 @@ scale = Vector2(14.342573, 14.622326)
 texture = ExtResource("19_ryguw")
 stretch_mode = 1
 
-[node name="Kaplin" type="Sprite2D" parent="DayEndManager/CanvasLayer/Control" unique_id=1365191778]
+[node name="Kaplin" type="Sprite2D" parent="DayEndManager/CanvasLayer/Control/DayReport" unique_id=1365191778]
 modulate = Color(1, 1, 1, 0.02745098)
 position = Vector2(990, 406)
 texture = ExtResource("35_0rl1p")
 
+[node name="ChooseDevice" type="Control" parent="DayEndManager/CanvasLayer/Control" unique_id=1849048938]
+visible = false
+anchors_preset = 0
+anchor_left = 0.021701388
+anchor_top = 0.033950616
+anchor_right = 0.9774306
+anchor_bottom = 0.9691358
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="DayEndManager/CanvasLayer/Control/ChooseDevice" unique_id=909371792]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 129.0
+offset_right = 1050.0
+offset_bottom = 560.0
+
+[node name="Label" type="Label" parent="DayEndManager/CanvasLayer/Control/ChooseDevice" unique_id=160220562]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -264.5
+offset_top = 41.0
+offset_right = 243.5
+offset_bottom = 111.0
+grow_horizontal = 2
+rotation = -0.047021583
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 23
+theme_override_font_sizes/font_size = 43
+text = "Pick your next machine!!"
+
+[node name="Label2" type="Label" parent="DayEndManager/CanvasLayer/Control/ChooseDevice" unique_id=767066807]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -89.5
+offset_top = 85.0
+offset_right = 418.5
+offset_bottom = 155.0
+grow_horizontal = 2
+rotation = -0.047021583
+theme_override_colors/font_color = Color(0.69965345, 0.69965345, 0.69965345, 1)
+theme_override_colors/font_outline_color = Color(0.1856485, 0.32392758, 0.19096124, 1)
+theme_override_constants/outline_size = 13
+theme_override_font_sizes/font_size = 29
+text = "(don't worry, its free!)"
+
+[node name="Button" type="Button" parent="DayEndManager/CanvasLayer/Control/ChooseDevice" unique_id=808803633]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 175.0
+offset_right = 323.7143
+offset_bottom = 515.0
+theme_override_colors/font_color = Color(1, 0.22745098, 0, 1)
+theme_override_colors/font_outline_color = Color(0.6335536, 0.12934393, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_facbu")
+text = "Grill"
+icon = ExtResource("36_ok6jj")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Button2" type="Button" parent="DayEndManager/CanvasLayer/Control/ChooseDevice" unique_id=467738320]
+layout_mode = 0
+offset_left = 770.0
+offset_top = 175.0
+offset_right = 1011.7143
+offset_bottom = 515.0
+theme_override_colors/font_color = Color(1, 0.22745098, 0, 1)
+theme_override_colors/font_outline_color = Color(0.6335536, 0.12934393, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_facbu")
+text = "Grill"
+icon = ExtResource("36_ok6jj")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Button3" type="Button" parent="DayEndManager/CanvasLayer/Control/ChooseDevice" unique_id=1727170734]
+layout_mode = 0
+offset_left = 437.0
+offset_top = 175.0
+offset_right = 678.7143
+offset_bottom = 515.0
+theme_override_colors/font_color = Color(1, 0.22745098, 0, 1)
+theme_override_colors/font_outline_color = Color(0.6335536, 0.12934393, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_facbu")
+text = "Grill"
+icon = ExtResource("36_ok6jj")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="ChooseIngredients" type="Control" parent="DayEndManager/CanvasLayer/Control" unique_id=99599388]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="DayEndManager/CanvasLayer/Control/ChooseIngredients" unique_id=634438154]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 33.0
+offset_right = 494.0
+offset_bottom = 615.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ok6jj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DayEndManager/CanvasLayer/Control/ChooseIngredients/Panel" unique_id=844311122]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CheckBox" type="CheckBox" parent="DayEndManager/CanvasLayer/Control/ChooseIngredients/Panel/VBoxContainer" unique_id=490042341]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 25
+text = "Eggs x 5"
+icon = ExtResource("15_2cqfq")
+expand_icon = true
+
+[node name="Label" type="Label" parent="DayEndManager/CanvasLayer/Control/ChooseIngredients" unique_id=913446660]
+layout_mode = 0
+offset_left = 653.0
+offset_top = 49.0
+offset_right = 972.0
+offset_bottom = 94.0
+theme_override_constants/outline_size = 17
+theme_override_font_sizes/font_size = 32
+text = "Restock your supply!"
+
+[node name="Label2" type="RichTextLabel" parent="DayEndManager/CanvasLayer/Control/ChooseIngredients" unique_id=1193832232]
+modulate = Color(1, 1, 1, 0.8235294)
+layout_mode = 0
+offset_left = 587.0
+offset_top = 93.0
+offset_right = 1059.0
+offset_bottom = 241.0
+theme_override_constants/outline_size = 13
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "Things you buy here will end up in your
+[img]res://assets/machines/steelcontainer.png[/img] freezers!
+WARNING: The Resuppliers might throw out items if space is full!"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="DayEndManager/CanvasLayer/Control/ChooseIngredients" unique_id=1829645169]
+layout_mode = 0
+offset_left = 514.0
+offset_top = 250.0
+offset_right = 1121.0
+offset_bottom = 323.0
+theme_override_constants/outline_size = 13
+theme_override_font_sizes/font_size = 25
+text = "Price:"
+
+[node name="Label4" type="Label" parent="DayEndManager/CanvasLayer/Control/ChooseIngredients" unique_id=498193250]
+layout_mode = 0
+offset_left = 514.0
+offset_top = 305.0
+offset_right = 1122.0
+offset_bottom = 378.0
+theme_override_constants/outline_size = 13
+theme_override_font_sizes/font_size = 25
+text = "Your funds before: "
+
+[node name="Label5" type="Label" parent="DayEndManager/CanvasLayer/Control/ChooseIngredients" unique_id=175305788]
+layout_mode = 0
+offset_left = 514.0
+offset_top = 367.0
+offset_right = 1117.0
+offset_bottom = 440.0
+theme_override_constants/outline_size = 13
+theme_override_font_sizes/font_size = 25
+text = "Your funds after:"
+
+[node name="Button" type="Button" parent="DayEndManager/CanvasLayer/Control/ChooseIngredients" unique_id=228311326]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 571.0
+offset_right = 945.0
+offset_bottom = 610.0
+theme_override_font_sizes/font_size = 22
+text = "Confirm And Continue"
+
 [connection signal="clickedObject" from="SelectionManager" to="HoldingManager" method="_on_selection_manager_clicked_object"]
 [connection signal="clickedObject" from="SelectionManager" to="SelectionManager" method="_on_clicked_object"]
 [connection signal="pressed" from="SelectorUIManager/CanvasLayer/Panel/Button" to="SelectorUIManager" method="_on_select_button_pressed"]
+[connection signal="pressed" from="DayEndManager/CanvasLayer/Control/DayReport/Button" to="DayEndManager" method="on_Report_button_clicked"]

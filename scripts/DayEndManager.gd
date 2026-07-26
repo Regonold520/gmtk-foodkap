@@ -10,7 +10,11 @@ class_name DayEndManager
 
 var moneyPerMeal = 50
 
+@export var machineChoices : Array[Button]
+
 func endDay():
+	$"../SelectionManager".running = false
+	$"../Camera2D".active = false
 	
 	var newTween = create_tween()
 	newTween.set_ease(Tween.EASE_OUT)
@@ -45,8 +49,11 @@ func endDay():
 		financeDisplay.text += str(Tips) + "$ [left]"
 	financeDisplay.text += "[hr] [br]"
 	
-	financeDisplay.text += "Today: +" + str(totalGain) + "$"  
-	financeDisplay.text += "[br] TOTAL FUNDS: +" + str(MONEY) + "$"  
+	if totalGain > 0:
+		financeDisplay.text += "Today: +" + str(totalGain) + "$"  
+	else:
+		financeDisplay.text += "Today: " + str(totalGain) + "$"  
+	financeDisplay.text += "[br] TOTAL FUNDS: " + str(MONEY) + "$"  
 	#Order Placements [right]+300$ [left]Missed Orders [right]-50$
 	#[left]Tips[right]+30$
 	#[hr]
@@ -66,6 +73,10 @@ func endDay():
 		else:
 			I.text = ""
 		X+= 1
+	
+	$CanvasLayer/Control/DayReport.visible = true
+	$CanvasLayer/Control/ChooseDevice.visible = false
+	$CanvasLayer/Control/ChooseIngredients.visible = false
 
 func calculateRating():
 	var curPlanet := Ref.currentDestination
@@ -97,6 +108,7 @@ func calculateRating():
 		if FinalRating >= 4.5: perfectRatings += 1
 		ratings.append(FinalRating)
 	for i in mealsNeeded: #for any orders left empty
+		comments.append(["I didn't get any food!!!","Hey. Like. Wheres the food?","WHERES MY ORDER??","Can I have food..?"].pick_random())
 		ratings.append(0)
 	return [getAverageOfArray(ratings),comments,mealsNeeded,perfectRatings]
 
@@ -104,4 +116,32 @@ func getAverageOfArray(arr : Array[float]) -> float:
 	var num = 0
 	for I in arr:
 		num += I
+		
 	return num / arr.size()
+
+
+func on_Report_button_clicked():
+	$CanvasLayer/Control/DayReport.visible = false
+	$CanvasLayer/Control/ChooseDevice.visible = true
+	
+	var machineChoiceOptions = []
+	while machineChoiceOptions.size() < 3:
+		var newChoice = Ref.machineData.keys().pick_random()
+		if !machineChoiceOptions.has(newChoice):
+			machineChoiceOptions.append(newChoice)
+	
+	var X = 0
+	for I in machineChoices:
+		if I.pressed.is_connected(machineSelected):
+			I.pressed.disconnect(machineSelected)
+		I.icon = load("res://assets/machines/" +machineChoiceOptions[X]+ ".png")
+		I.text = machineChoiceOptions[X].capitalize()
+		I.pressed.connect(machineSelected.bind(machineChoiceOptions[X]))
+		X += 1
+
+func machineSelected(type):
+	$CanvasLayer/Control/ChooseDevice.visible = false
+	$CanvasLayer/Control/ChooseIngredients.visible = true
+	$"../MachineListManager".addMachine(type)
+	
+	

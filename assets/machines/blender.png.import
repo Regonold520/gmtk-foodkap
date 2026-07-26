@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0xu46j311sbf"
-path="res://.godot/imported/grill.png-4f52565cd4b1cde65bc01f6717507b8b.ctex"
+uid="uid://qi1iepq1vdk5"
+path="res://.godot/imported/blender.png-f486a0c2511c74ce7579c1ac7dbf60b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/machines/grill.png"
-dest_files=["res://.godot/imported/grill.png-4f52565cd4b1cde65bc01f6717507b8b.ctex"]
+source_file="res://assets/machines/blender.png"
+dest_files=["res://.godot/imported/blender.png-f486a0c2511c74ce7579c1ac7dbf60b4.ctex"]
 
 [params]
 

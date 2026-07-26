@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bkl1wg1iteywy" path="res://assets/machines/singleContainer.png" id="2_hgxv0"]
 [ext_resource type="PackedScene" uid="uid://blk14fdp1rcc6" path="res://scenes/ingredientBox.tscn" id="3_56gex"]
 [ext_resource type="Texture2D" uid="uid://b6ju3xp0u5fm8" path="res://assets/machines/countertop.png" id="4_qg1nf"]
-[ext_resource type="Texture2D" uid="uid://qi1iepq1vdk5" path="res://assets/machines/electric-blender-isolated-on-white-2EB0P73.png" id="5_72djp"]
+[ext_resource type="Texture2D" uid="uid://qi1iepq1vdk5" path="res://assets/machines/blender.png" id="5_72djp"]
 [ext_resource type="Script" uid="uid://dhinuyab5vpm" path="res://scripts/machineSlot.gd" id="6_etgoh"]
 [ext_resource type="Script" uid="uid://cu2b7000l0gfw" path="res://scripts/machineStarter.gd" id="6_hgxv0"]
 [ext_resource type="Script" uid="uid://cs0sbb3q5o2qs" path="res://scripts/textureOffset.gd" id="7_oshx6"]

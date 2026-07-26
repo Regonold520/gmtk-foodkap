@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cj3rpqgdpibsr"]
 
-[ext_resource type="Texture2D" uid="uid://0xu46j311sbf" path="res://assets/machines/grill.png" id="1_54o2j"]
+[ext_resource type="Texture2D" uid="uid://0xu46j311sbf" path="res://assets/machines/stove.png" id="1_54o2j"]
 [ext_resource type="Script" uid="uid://cnid3l5q76uey" path="res://scripts/machineSpecific/stove.gd" id="1_ieqif"]
 [ext_resource type="Texture2D" uid="uid://bnamtuh6dbb51" path="res://assets/machines/container.png" id="2_apdcf"]
 [ext_resource type="Script" uid="uid://dhinuyab5vpm" path="res://scripts/machineSlot.gd" id="2_ieqif"]

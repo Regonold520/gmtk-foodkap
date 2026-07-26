@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bkl1wg1iteywy" path="res://assets/machines/singleContainer.png" id="2_6dcph"]
 [ext_resource type="PackedScene" uid="uid://blk14fdp1rcc6" path="res://scenes/ingredientBox.tscn" id="3_ex77r"]
 [ext_resource type="Texture2D" uid="uid://b6ju3xp0u5fm8" path="res://assets/machines/countertop.png" id="4_53l8s"]
-[ext_resource type="Texture2D" uid="uid://dftiwpt4ectcg" path="res://assets/ingredients/mixer.png" id="5_ex77r"]
+[ext_resource type="Texture2D" uid="uid://dbyx61rm2u0ln" path="res://assets/machines/mixer.png" id="5_6dcph"]
 [ext_resource type="Script" uid="uid://cu2b7000l0gfw" path="res://scripts/machineStarter.gd" id="6_seuhx"]
 [ext_resource type="Script" uid="uid://dhinuyab5vpm" path="res://scripts/machineSlot.gd" id="7_kpy46"]
 [ext_resource type="Script" uid="uid://cs0sbb3q5o2qs" path="res://scripts/textureOffset.gd" id="8_to63m"]
@@ -57,7 +57,7 @@ color_ramp = SubResource("Gradient_mlghm")
 
 [node name="Visual" type="Sprite2D" parent="." unique_id=146211639]
 position = Vector2(-0.8, -21.199999)
-texture = ExtResource("5_ex77r")
+texture = ExtResource("5_6dcph")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1686640489]
 position = Vector2(8.8, -16.4)

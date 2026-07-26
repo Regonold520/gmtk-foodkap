@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qi1iepq1vdk5"
-path="res://.godot/imported/electric-blender-isolated-on-white-2EB0P73.png-fe1e3b98a566172489c2448b08f3d488.ctex"
+uid="uid://0xu46j311sbf"
+path="res://.godot/imported/stove.png-1aa14cb6b072d8f079d01fe364407655.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/machines/electric-blender-isolated-on-white-2EB0P73.png"
-dest_files=["res://.godot/imported/electric-blender-isolated-on-white-2EB0P73.png-fe1e3b98a566172489c2448b08f3d488.ctex"]
+source_file="res://assets/machines/stove.png"
+dest_files=["res://.godot/imported/stove.png-1aa14cb6b072d8f079d01fe364407655.ctex"]
 
 [params]
 
