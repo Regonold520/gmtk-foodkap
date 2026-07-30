@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://c624kfde6r3yn"]
+
+[ext_resource type="Texture2D" uid="uid://bciugcximuiyt" path="res://assets/uiAndBg/pixelCircle.png" id="1_cohc6"]
+
+[sub_resource type="Animation" id="Animation_cohc6"]
+length = 0.001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_q5flx"]
+resource_name = "default"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03333333, 1.0333333, 1.9666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.80784315), Color(1, 1, 1, 0.36862746), Color(1, 1, 1, 0.80784315)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r03d4"]
+_data = {
+&"RESET": SubResource("Animation_cohc6"),
+&"default": SubResource("Animation_q5flx")
+}
+
+[node name="PixelCircle" type="Sprite2D" unique_id=2112851911]
+modulate = Color(1, 0.87964445, 0.029258106, 1)
+z_index = 2
+scale = Vector2(0.19127321, 0.19127321)
+texture = ExtResource("1_cohc6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2060068269]
+libraries/ = SubResource("AnimationLibrary_r03d4")
+speed_scale = 2.0

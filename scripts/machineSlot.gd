@@ -1,4 +1,4 @@
-extends Area2D
+extends BaseInteractable
 class_name MachineSlot
 
 var item : IngredientResource
@@ -20,6 +20,7 @@ func areaClicked(area : Area2D) -> void:
 			item = null
 
 func _process(delta): #due to the volatile nature of machine slots, we will assume it can and will change every frame
+	super(delta)
 	if item:
 		$Food.texture = item.getTexture()
 		$Food.modulate = item.Tint

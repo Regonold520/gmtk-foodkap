@@ -592,12 +592,10 @@ texture = ExtResource("13_getpj")
 
 [node name="Left" parent="DeepFreezer" unique_id=961949610 instance=ExtResource("2_0xm2m")]
 position = Vector2(-17.2, 1.2000077)
-scale = Vector2(0.39999995, 0.39999995)
 canRecieveNewItemsIfEmpty = false
 
 [node name="Right" parent="DeepFreezer" unique_id=734521637 instance=ExtResource("2_0xm2m")]
 position = Vector2(17.599998, 1.2000077)
-scale = Vector2(0.39999995, 0.39999995)
 canRecieveNewItemsIfEmpty = false
 
 [node name="DeepFreezer4" type="Sprite2D" parent="." unique_id=771303666]
@@ -607,12 +605,10 @@ texture = ExtResource("13_getpj")
 
 [node name="Left" parent="DeepFreezer4" unique_id=1368300611 instance=ExtResource("2_0xm2m")]
 position = Vector2(-17.2, 1.2000077)
-scale = Vector2(0.39999995, 0.39999995)
 canRecieveNewItemsIfEmpty = false
 
 [node name="Right" parent="DeepFreezer4" unique_id=140884475 instance=ExtResource("2_0xm2m")]
 position = Vector2(17.599998, 1.2000077)
-scale = Vector2(0.39999995, 0.39999995)
 canRecieveNewItemsIfEmpty = false
 
 [node name="DeepFreezer3" type="Sprite2D" parent="." unique_id=905716188]
@@ -622,12 +618,10 @@ texture = ExtResource("13_getpj")
 
 [node name="Left" parent="DeepFreezer3" unique_id=459325731 instance=ExtResource("2_0xm2m")]
 position = Vector2(-17.2, 1.2000077)
-scale = Vector2(0.39999995, 0.39999995)
 canRecieveNewItemsIfEmpty = false
 
 [node name="Right" parent="DeepFreezer3" unique_id=1833176168 instance=ExtResource("2_0xm2m")]
 position = Vector2(17.599998, 1.2000077)
-scale = Vector2(0.39999995, 0.39999995)
 canRecieveNewItemsIfEmpty = false
 
 [node name="DeepFreezer2" type="Sprite2D" parent="." unique_id=824760828]
@@ -637,12 +631,10 @@ texture = ExtResource("13_getpj")
 
 [node name="Left" parent="DeepFreezer2" unique_id=561892683 instance=ExtResource("2_0xm2m")]
 position = Vector2(-17.2, 1.2000077)
-scale = Vector2(0.39999995, 0.39999995)
 canRecieveNewItemsIfEmpty = false
 
 [node name="Right" parent="DeepFreezer2" unique_id=1334110125 instance=ExtResource("2_0xm2m")]
 position = Vector2(17.599998, 1.2000077)
-scale = Vector2(0.39999995, 0.39999995)
 canRecieveNewItemsIfEmpty = false
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=325803655 node_paths=PackedStringArray("BG")]
@@ -924,13 +916,11 @@ stream = ExtResource("33_jq2sk")
 script = ExtResource("33_facbu")
 slots = [NodePath("../DeepFreezer/Left"), NodePath("../DeepFreezer/Right"), NodePath("../DeepFreezer4/Left"), NodePath("../DeepFreezer4/Right"), NodePath("../DeepFreezer3/Left"), NodePath("../DeepFreezer3/Right"), NodePath("../DeepFreezer2/Left"), NodePath("../DeepFreezer2/Right")]
 
-[node name="DayEndManager" type="Node" parent="." unique_id=100021437 node_paths=PackedStringArray("mealManager", "percentageDisplay", "financeDisplay", "ReviewLabels", "machineChoices")]
+[node name="DayEndManager" type="Node" parent="." unique_id=100021437 node_paths=PackedStringArray("mealManager", "percentageDisplay", "financeDisplay")]
 script = ExtResource("30_kq58d")
 mealManager = NodePath("../MealManager")
 percentageDisplay = NodePath("CanvasLayer/Control/DayReport/Percentage")
 financeDisplay = NodePath("CanvasLayer/Control/DayReport/Panel/Money")
-ReviewLabels = [NodePath("CanvasLayer/Control/DayReport/Review1"), NodePath("CanvasLayer/Control/DayReport/Review2"), NodePath("CanvasLayer/Control/DayReport/Review3"), NodePath("CanvasLayer/Control/DayReport/Review4")]
-machineChoices = [NodePath("CanvasLayer/Control/ChooseDevice/Button"), NodePath("CanvasLayer/Control/ChooseDevice/Button2"), NodePath("CanvasLayer/Control/ChooseDevice/Button3")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="DayEndManager" unique_id=74777889]
 

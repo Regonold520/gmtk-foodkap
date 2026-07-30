@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbuptnfbij8i0"
-path="res://.godot/imported/cuttingboard.png-9f16f7bce1749f8f97e869759f98074b.ctex"
+path="res://.godot/imported/cuttingBoard.png-d64011b4e7d17d51f4d8ee6a40e8baca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/machines/cuttingboard.png"
-dest_files=["res://.godot/imported/cuttingboard.png-9f16f7bce1749f8f97e869759f98074b.ctex"]
+source_file="res://assets/machines/cuttingBoard.png"
+dest_files=["res://.godot/imported/cuttingBoard.png-d64011b4e7d17d51f4d8ee6a40e8baca.ctex"]
 
 [params]
 

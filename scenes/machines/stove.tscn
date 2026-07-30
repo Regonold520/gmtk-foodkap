@@ -29,11 +29,9 @@ texture = ExtResource("2_apdcf")
 
 [node name="Left" parent="Container" unique_id=961949610 instance=ExtResource("3_73n6u")]
 position = Vector2(-17.2, 1.2000077)
-scale = Vector2(0.39999995, 0.39999995)
 
 [node name="Right" parent="Container" unique_id=1866261732 instance=ExtResource("3_73n6u")]
 position = Vector2(17.599998, 1.2000077)
-scale = Vector2(0.39999995, 0.39999995)
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1196010105]
 texture = ExtResource("1_54o2j")

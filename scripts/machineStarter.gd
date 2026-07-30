@@ -1,4 +1,4 @@
-extends Area2D
+extends BaseInteractable
 class_name MachineStarter
 
 func _ready() -> void:
