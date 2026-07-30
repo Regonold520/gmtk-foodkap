@@ -59,6 +59,7 @@ func endDay():
 	#[hr]
 	#Today: +30$
 	#[b]TOTAL: 300$
+	print("comments are ", comments)
 	var selectedComments = []
 	for I in range(4):
 		var chosen = comments.pick_random()
@@ -69,7 +70,7 @@ func endDay():
 	for I in ReviewLabels:
 		var stuff = selectedComments.get(X)
 		if stuff:
-			I.text = selectedComments.get(X)
+			I.text = stuff
 		else:
 			I.text = ""
 		X+= 1

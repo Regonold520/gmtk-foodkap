@@ -917,11 +917,13 @@ stream = ExtResource("33_jq2sk")
 script = ExtResource("33_facbu")
 slots = [NodePath("../DeepFreezer/Left"), NodePath("../DeepFreezer/Right"), NodePath("../DeepFreezer4/Left"), NodePath("../DeepFreezer4/Right"), NodePath("../DeepFreezer3/Left"), NodePath("../DeepFreezer3/Right"), NodePath("../DeepFreezer2/Left"), NodePath("../DeepFreezer2/Right")]
 
-[node name="DayEndManager" type="Node" parent="." unique_id=100021437 node_paths=PackedStringArray("mealManager", "percentageDisplay", "financeDisplay")]
+[node name="DayEndManager" type="Node" parent="." unique_id=100021437 node_paths=PackedStringArray("mealManager", "percentageDisplay", "financeDisplay", "ReviewLabels", "machineChoices")]
 script = ExtResource("30_kq58d")
 mealManager = NodePath("../MealManager")
 percentageDisplay = NodePath("CanvasLayer/Control/DayReport/Percentage")
 financeDisplay = NodePath("CanvasLayer/Control/DayReport/Panel/Money")
+ReviewLabels = [NodePath("CanvasLayer/Control/DayReport/Review1"), NodePath("CanvasLayer/Control/DayReport/Review2"), NodePath("CanvasLayer/Control/DayReport/Review3"), NodePath("CanvasLayer/Control/DayReport/Review4")]
+machineChoices = [NodePath("CanvasLayer/Control/ChooseDevice/Button"), NodePath("CanvasLayer/Control/ChooseDevice/Button2"), NodePath("CanvasLayer/Control/ChooseDevice/Button3")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="DayEndManager" unique_id=74777889]
 
