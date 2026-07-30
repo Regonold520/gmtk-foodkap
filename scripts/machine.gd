@@ -27,3 +27,9 @@ func getRunTime() -> float:
 func _process(delta):
 	if Running:
 		run(delta)
+
+func visual_can_start():
+	for I in slots:
+		if I.item == null:
+			return false
+	return true

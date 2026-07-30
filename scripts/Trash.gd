@@ -1,4 +1,4 @@
-extends Area2D
+extends BaseInteractable
 class_name Trash
 
 @export var trashParticle : CPUParticles2D
@@ -20,3 +20,9 @@ func areaClicked(area : Area2D) -> void:
 			newParticle.finished.connect(newParticle.queue_free)
 			await get_tree().create_timer(0.9).timeout
 			newParticle.z_index = -1
+
+func selectable() -> bool:
+	if !get_child(0).disabled:
+		if Ref.holdingManager.inHand != null:
+			return true
+	return false

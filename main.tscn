@@ -62,7 +62,7 @@ colors = PackedColorArray(0.9137255, 0.36862746, 0, 1, 1, 0.03529412, 0.07450981
 colors = PackedColorArray(0.9137255, 1, 0, 1, 1, 0.84313726, 0.07450981, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mlghm"]
-size = Vector2(178.00006, 97.00001)
+size = Vector2(17.999939, 10.057246)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mltvj"]
 size = Vector2(26, 9)
@@ -308,6 +308,18 @@ initial_velocity_max = 30.0
 scale_amount_min = 2.0
 scale_amount_max = 2.0
 
+[node name="Area2D" type="Area2D" parent="." unique_id=1230229922 node_paths=PackedStringArray("trashParticle")]
+position = Vector2(716.00006, 124.00001)
+scale = Vector2(9.825, 9.825)
+script = ExtResource("6_0odxb")
+trashParticle = NodePath("../TrashParticle")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2069869261]
+position = Vector2(0.19995117, 0.9573746)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_mlghm")
+disabled = true
+
 [node name="TextureRect" type="TextureRect" parent="." unique_id=78953797]
 offset_left = 682.265
 offset_top = 85.0
@@ -319,17 +331,6 @@ offset_transform_visual_only = false
 texture = ExtResource("5_d13ii")
 stretch_mode = 1
 
-[node name="Area2D" type="Area2D" parent="TextureRect" unique_id=1230229922 node_paths=PackedStringArray("trashParticle")]
-position = Vector2(37.994003, 78.914)
-scale = Vector2(0.39999995, 0.39999995)
-script = ExtResource("6_0odxb")
-trashParticle = NodePath("../../TrashParticle")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D" unique_id=2069869261]
-position = Vector2(-1, 4.5)
-shape = SubResource("RectangleShape2D_mlghm")
-disabled = true
-
 [node name="Handle" type="Sprite2D" parent="TextureRect" unique_id=1198956977]
 z_index = 1
 position = Vector2(36.9, 56.5)
@@ -339,7 +340,7 @@ texture = ExtResource("6_1u8w0")
 position = Vector2(0.40000004, -0.8000015)
 scale = Vector2(0.99999994, 0.99999994)
 script = ExtResource("7_1u8w0")
-trashClickzone = NodePath("../../Area2D")
+trashClickzone = NodePath("../../../Area2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Handle/Area2D" unique_id=2120305249]
 position = Vector2(0, 0.5)

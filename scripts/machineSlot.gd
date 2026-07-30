@@ -26,3 +26,11 @@ func _process(delta): #due to the volatile nature of machine slots, we will assu
 		$Food.modulate = item.Tint
 	else:
 		$Food.texture = null
+
+func selectable() -> bool:
+	if item == null:
+		if Ref.holdingManager.inHand != null:
+			return true
+		return false
+	else:
+		return interactable

@@ -33,7 +33,6 @@ func format_time(total_seconds: int) -> String:
 
 func secondPassed():
 	var timePercentRemaining = 1-inverse_lerp(timer.wait_time,0,timer.time_left)
-	print(inverse_lerp(0.25,0,timePercentRemaining))
 	if timePercentRemaining <= 0.25:
 		var newStream = AudioStreamPlayer2D.new()
 		add_child(newStream)
